@@ -85,5 +85,7 @@ Getting Started:
             Check 'Map' on the 'NGDotNet' database
             Check all roles except 'db_denydatareader' and 'db_denydatawriter'
             Click 'OK'
-            
-->![alt tag](http://i.imgur.com/tthpnHa.gif)<-
+<p align="center">
+![alt tag](http://i.imgur.com/tthpnHa.gif)
+  <img />
+</p>
