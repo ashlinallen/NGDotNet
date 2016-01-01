@@ -34,10 +34,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="EFContext.cs" />
-    <Compile Include="Migrations\201508182350579_InitialCreate.cs" />
-    <Compile Include="Migrations\201508182350579_InitialCreate.Designer.cs">
-      <DependentUpon>201508182350579_InitialCreate.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -74,11 +70,6 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201508182350579_InitialCreate.resx">
-      <DependentUpon>201508182350579_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
