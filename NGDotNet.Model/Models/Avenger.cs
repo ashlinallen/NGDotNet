@@ -6,7 +6,7 @@ namespace NGDotNet.Model.Models
     public class Avenger
     {
         [Key]
-        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
