@@ -86,4 +86,4 @@ Getting Started:
             Check all roles except 'db_denydatareader' and 'db_denydatawriter'
             Click 'OK'
             
-![alt tag](http://i.imgur.com/tthpnHa.gif)
+->![alt tag](http://i.imgur.com/tthpnHa.gif)<-
