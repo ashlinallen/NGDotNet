@@ -25,7 +25,7 @@ build/
 [Bb]in/
 [Oo]bj/
 gulp_build/
-./index.html
+NGDotNet.Web/index.html
 app/templates.js
 
 # MSTest test Results
