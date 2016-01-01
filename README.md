@@ -86,6 +86,5 @@ Getting Started:
             Check all roles except 'db_denydatareader' and 'db_denydatawriter'
             Click 'OK'
 <p align="center">
-![alt tag](http://i.imgur.com/tthpnHa.gif)
-  <img />
+  <img src='http://i.imgur.com/tthpnHa.gif'/>
 </p>
