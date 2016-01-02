@@ -45,5 +45,6 @@ angular.element(document).ready(function() {
         'app.layout'
     ]);
 
-    angular.bootstrap(document, ['app'], { debugInfoEnabled: true });
+    //angular.bootstrap(document, ['app'], { debugInfoEnabled: true });
+    angular.bootstrap(document, ['app']);
 });
