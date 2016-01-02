@@ -1,8 +1,9 @@
 ﻿/*#region Override background color theme */
 
 /*For Bootstrap 3*/
-.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
-
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
+}
 
 body {
     background-color: #FFF;
@@ -10,43 +11,46 @@ body {
 
 .navbar-inverse {
     background-color: #333;
+
+    .btn-navbar {
+        background-color: #333;
+
+        &:hover {
+            background-color: #333;
+        }
+    }
 }
 
 .sidebar-widget form {
     margin: 0em -1em;
 }
 
-.sidebar .navi > li > a {
-    background-color: #333 !important;
-}
-
-.sidebar .navi li ul li a {
-    color: #fff;
-}
-
-    .sidebar .navi li ul li a:hover {
-        color: #52b9e9;
-    }
-
-    .sidebar .navi li ul li a:disabled {
-        color: #999;
-    }
-
-.navbar-inverse .btn-navbar {
-    background-color: #333;
-}
-
-    .navbar-inverse .btn-navbar:hover {
-        background-color: #333;
-    }
-
 .sidebar {
     margin-top: -2px;
-}
+    .navi {
+        > li > a {
+            background-color: #333 !important;
+        }
 
-    .sidebar .sidebar-inner {
+        li ul li {
+            a {
+                color: #fff;
+
+                &:hover {
+                    color: #52b9e9;
+                }
+
+                &:disabled {
+                    color: #999;
+                }
+            }
+        }
+    }
+
+    .sidebar-inner {
         background-color: #333;
     }
+}
 
 .sidebar-filler {
     z-index: -1;
@@ -57,7 +61,6 @@ body {
     background-color: #333;
     width: 230px;
 }
-
 /*#endregion */
 
 /* #region Main Styles */
@@ -84,11 +87,11 @@ textarea.form-control {
     /*margin-bottom: 0;*/
     /*padding: 1em 0;*/
     height: 12em;
-}
 
-    .widget .padd.padd-tight {
+    &.padd-tight {
         padding: 6px;
     }
+}
 
 .list-flow.list-flow-tight {
     width: 90px;
@@ -99,18 +102,18 @@ textarea.form-control {
     height: 228px;
 }
 
-.btn > i {
-    margin-right: 8px;
-}
-
 .btn {
     margin-right: 4px;
     margin-left: 4px;
-}
 
-    .btn.btn-notext > i {
+    > i {
+        margin-right: 8px;
+    }
+
+    &.btn-notext > i {
         margin-right: 0;
     }
+}
 
 .btn-group{
     margin: .2em;
@@ -143,11 +146,11 @@ small {
     cursor: pointer;
     color: white;
     background-color: #52b9e9;
-}
 
-    .widget-content .padd:hover * {
+    * {
         color: white;
     }
+}
 
 .list-flow {
     margin: 6px;
@@ -180,16 +183,19 @@ small {
 
 .input-group[class*="col-"] {
     width: 80%;
-    margin: 0 1.5em;}
-
-.user .user-pic {
-    display: block;
-    margin: auto;
+    margin: 0 1.5em;
 }
 
-.user .user-details {
-    margin-left: 100px;
-    margin-right: 10px;
+.user {
+    .user-pic {
+        display: block;
+        margin: auto;
+    }
+
+    .user-details {
+        margin-left: 100px;
+        margin-right: 10px;
+    }
 }
 
 .widget-content {
@@ -203,15 +209,17 @@ small {
     margin: auto;
 }
 
-.navbar .navbar-brand {
-    /*background: url(../content/images/gg.png) no-repeat left top !important;*/
-    margin: 0 1em;
-    height: 45px;
-}
+.navbar {
+    .navbar-brand {
+        /*background: url(../content/images/gg.png) no-repeat left top !important;*/
+        margin: 0 1em;
+        height: 45px;
+    }
 
-.navbar .brand-title {
-    /*margin-left: 4em;*/
-    color: #FFFFFF;
+    .brand-title {
+        /*margin-left: 4em;*/
+        color: #FFFFFF;
+    }
 }
 
 .navbar-logo img {
@@ -226,11 +234,11 @@ small {
 /*#region Splash */
 #splash-page {
     z-index: 99999 !important;
-}
 
-    #splash-page .bar {
+    .bar {
         width: 100%;
     }
+}
 
 .page-splash {
     z-index: 99999 !important;
@@ -242,14 +250,7 @@ small {
     background-color: #333;
     opacity: .9;
     pointer-events: auto;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-transition: opacity 0.3s linear;
-    -moz-transition: opacity 0.3s linear;
-    -o-transition: opacity 0.3s linear;
     transition: opacity 0.3s linear;
 }
 
@@ -259,33 +260,33 @@ small {
     font-size: 400%;
     font-family: "Segoe UI", Arial, Helvetica, sans-serif;
     font-weight: normal;
-    -webkit-text-shadow: 2px 2px #000000;
     text-shadow: 2px 2px #000000;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.15);
     text-transform: uppercase;
     text-decoration: none;
     color: #F58A00;
     padding: 0;
-}
 
-    .page-splash-message.page-splash-message-subtle {
+    &.page-splash-message-subtle {
         margin: 30% auto 0 auto;
         font-size: 200%;
     }
+}
 
 .flag-haschanges {
     position: fixed !important;
     display: inline;
 }
 
-.fa-asterisk.fa-asterisk-large {
-    font-size: 180%;
-    vertical-align: middle;
-    color: #F58A00;
-}
+.fa-asterisk {
+    &.fa-asterisk-large {
+        font-size: 180%;
+        vertical-align: middle;
+        color: #F58A00;
+    }
 
-.fa-asterisk.fa-asterisk-alert {
-    color: #F58A00;
+    &.fa-asterisk-alert {
+        color: #F58A00;
+    }
 }
 
 .fa-asterisk-inline {
@@ -328,23 +329,22 @@ small {
     font-size: 400%;
     font-family: "Segoe UI", Arial, Helvetica, sans-serif;
     font-weight: normal;
-    -webkit-text-shadow: 2px 2px #000000;
     text-shadow: 2px 2px #000000;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.15);
     text-transform: uppercase;
     text-decoration: none;
     color: #F58A00;
     padding: 0;
-}
 
-.page-spinner-message.page-spinner-message-subtle {
-    margin: 30% auto 0 auto;
-    font-size: 200%;
+    &.page-spinner-message-subtle {
+        margin: 30% auto 0 auto;
+        font-size: 200%;
+    }
 }
 
 .overlay-message {
     font-size: 200%;
 }
+
 .spinner {
     margin: 20% auto 0 auto;
     left: auto;
@@ -352,21 +352,21 @@ small {
 }
 /*#endregion*/
 
-table th > a {
-    font-weight: bold;
+table {
+    th > a {
+        font-weight: bold;
+    }
+    th, td {
+        text-align: left;
+        vertical-align: middle;
+    }
 }
 
-table th,
-table td {
-    text-align: left;
-    vertical-align: middle;
+.table-hover tbody tr:hover {
+    > td, > th {
+        cursor: pointer;
+    }
 }
-
-.table-hover tbody tr:hover > td,
-.table-hover tbody tr:hover > th {
-    cursor: pointer;
-}
-
 
 .widget-content.referrer {
     border-width: 0;
@@ -383,6 +383,7 @@ a {
 .avenger-name {
     font-size: 1.2em;
 }
+
 .avenger-thumb {
     margin: 0.1em !important;
     padding: 0.1em;
@@ -404,105 +405,97 @@ a {
 /*#endregion */
 
 /*#region Angular ng-include, ng-view, ng-repeat shuffle animations*/
-
-.shuffle-animation.ng-enter,
-.shuffle-animation.ng-leave {
-    position: relative;
-}
-
-.shuffle-animation.ng-enter {
-    -moz-transition: ease-out all 0.3s 0.4s;
-    -o-transition: ease-out all 0.3s 0.4s;
-    -webkit-transition: ease-out all 0.3s 0.4s;
-    transition: ease-out all 0.3s 0.4s;
-    left: 2em;
-    opacity: 0;
-}
-
-    .shuffle-animation.ng-enter.ng-enter-active {
-        left: 0;
-        opacity: 1;
+.shuffle-animation {
+    &.ng-enter,
+    &.ng-leave {
+        position: relative;
     }
 
-.shuffle-animation.ng-leave {
-    -moz-transition: 0.3s ease-out all;
-    -o-transition: 0.3s ease-out all;
-    -webkit-transition: 0.3s ease-out all;
-    transition: 0.3s ease-out all;
-    left: 0;
-    opacity: 1;
-}
-
-    .shuffle-animation.ng-leave.ng-leave-active {
+    &.ng-enter {
+        transition: ease-out all 0.3s 0.4s;
         left: 2em;
         opacity: 0;
+
+        &.ng-enter-active {
+            left: 0;
+            opacity: 1;
+        }
     }
+
+    &.ng-leave {
+        transition: 0.3s ease-out all;
+        left: 0;
+        opacity: 1;
+
+        &.ng-leave-active {
+            left: 2em;
+            opacity: 0;
+        }
+    }
+}
 /*#endregion*/
 
 /*#region Angular ng-include, ng-view, ng-repeat fader animation */
-.fader-animation.ng-enter,
-.fader-animation.ng-leave,
-.fader-animation.ng-move {
-    position: relative;
-}
+.fader-animation {
+    &.ng-enter, &.ng-leave, &.ng-move {
+        position: relative;
+    }
 
-.fader-animation.ng-enter,
-.fader-animation.ng-leave {
-    -webkit-transition: cubic-bezier(0.250, 0.460, 0.450, 0.940) all 0.5s;
-    -moz-transition: cubic-bezier(0.250, 0.460, 0.450, 0.940) all 0.5s;
-    -o-transition: cubic-bezier(0.250, 0.460, 0.450, 0.940) all 0.5s;
-    transition: cubic-bezier(0.250, 0.460, 0.450, 0.940) all 0.5s;
-    opacity: 1;
-}
-
-.fader-animation.ng-enter,
-.fader-animation.ng-leave.ng-leave-active {
-    opacity: 0;
-}
-
-    .fader-animation.ng-enter.ng-enter-active {
+    &.ng-enter, &.ng-leave {
+        transition: cubic-bezier(0.250, 0.460, 0.450, 0.940) all 0.5s;
         opacity: 1;
     }
 
-.fader-animation.ng-move {
-  opacity:0.5;
-}
-.fader-animation.ng-move.ng-move-active {
-  opacity:1;
-}
+    &.ng-enter, &.ng-leave.ng-leave-active {
+        opacity: 0;
+    }
 
+    &.ng-enter.ng-enter-active {
+        opacity: 1;
+    }
+
+    &.ng-move {
+      opacity:0.5;
+
+        &.ng-move-active {
+          opacity:1;
+        }
+    }
+}
 /*#endregion*/
 
 /*#region Angular ng-show dissolve animation */
-.dissolve-animation.ng-hide-remove,
-.dissolve-animation.ng-hide-add {
-    position: fixed !important;
-    display: inline !important;
-    -webkit-transition: 0.5s linear all;
-    -moz-transition: 0.5s linear all;
-    -o-transition: 0.5s linear all;
-    transition: 0.5s linear all;
-}
+.dissolve-animation {
+    &.ng-hide-remove,
+    &.ng-hide-add {
+        position: fixed !important;
+        display: inline !important;
+        transition: 0.5s linear all;
+    }
 
-    .dissolve-animation.ng-hide-remove.ng-hide-remove-active,
-    .dissolve-animation.ng-hide-add {
+    &.ng-hide-remove.ng-hide-remove-active,
+    &.ng-hide-add {
         opacity: 1;
     }
 
-        .dissolve-animation.ng-hide-add.ng-hide-add-active,
-        .dissolve-animation.ng-hide-remove {
-            opacity: 0;
-        }
+    &.ng-hide-add.ng-hide-add-active,
+    &.ng-hide-remove {
+        opacity: 0;
+    }
+}
 /*#endregion */
 
 /*#region toastr */
-#toast-container.toast-top-full-width > div, #toast-container.toast-bottom-full-width > div {
-    margin: 4px auto;
+#toast-container {
+    .toast-top-full-width, .toast-bottom-full-width {
+        > div {
+            margin: 4px auto;
+        }
+    }
 }
 /*#endregion */
 
 /*#region Responsive */
-
 @media (max-width: 979px) {
     .sidebar-filler {
         width: 200px;
@@ -510,11 +503,11 @@ a {
 
     .nav-collapse {
         clear: none;
-    }
 
-        .nav-collapse .nav > li {
+        .nav > li {
             float: left;
         }
+    }
 
     .navbar .btn-navbar {
         display: none;
@@ -549,11 +542,11 @@ a {
 
     .nav-collapse {
         clear: both;
-    }
 
-        .nav-collapse .nav > li {
+        .nav > li {
             float: none;
         }
+    }
 
     .navbar .btn-navbar {
         display: block;
@@ -568,11 +561,11 @@ a {
     .page-splash-message {
         font-size: 200%;
         margin: 40% auto 0 auto;
-    }
 
-        .page-splash-message.page-splash-message-subtle {
+        &.page-splash-message-subtle {
             font-size: 150%;
         }
+    }
 
     .sidebar .sidebar-inner {
         height: inherit;
@@ -586,33 +579,6 @@ a {
 }
 
 @media (max-width: 320px) {
-    .today-datas li {
-        padding: 1em .5em;
-        line-height: 1em;
-    }
-
-        .today-datas li i {
-            font-size: 2em;
-        }
-
-        .today-datas li .datas-text span {
-            font-size: 1em;
-        }
-
-    .btn {
-        margin: .2em;
-        width: 7em;
-    }
-
-    .btn-group > .btn {
-        display: block;
-        width: 7em;
-    }
-
-    .btn-group.pull-right {
-        margin: .2em 0;
-    }
-
     input,
     select {
         width: 85% !important;
@@ -620,6 +586,42 @@ a {
 
     textarea {
         width: 80%;
+    }
+
+    h3 {
+        font-size: 1.5em !important;
+        line-height: 1.2em !important;
+    }
+
+    .today-datas  {
+        li {
+            padding: 1em .5em;
+            line-height: 1em;
+
+            i {
+                font-size: 2em;
+            }
+
+            .datas-text span {
+                font-size: 1em;
+            }
+        }
+    }
+
+    .btn {
+        margin: .2em;
+        width: 7em;
+    }
+
+    .btn-group {
+        > .btn {
+            display: block;
+            width: 7em;
+        }
+
+        &.pull-right {
+            margin: .2em 0;
+        }
     }
 
     .img-thumbnail.user-pic {
@@ -630,11 +632,5 @@ a {
         margin-left: 7em;
         margin-right: .5em;
     }
-
-    h3 {
-        font-size: 1.5em !important;
-        line-height: 1.2em !important;
-    }
 }
-
 /*#endregion */
