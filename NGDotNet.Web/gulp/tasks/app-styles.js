@@ -15,8 +15,8 @@ gulp.task('app-styles', function () {
             sourceMap: 'sass',
             outputStyle: global.isProd ? 'compressed' : 'nested'
         }))
-        .pipe(autoprefixer('last 2 versions', '> 1%', 'ie 8'))
         .on('error', handleErrors)
+        .pipe(autoprefixer('last 2 versions', '> 1%', 'ie 8'))
         .pipe(gulp.dest(config.styles.dest))
         .pipe(browserSync.reload({ stream: true }));
 
