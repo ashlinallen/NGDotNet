@@ -3,7 +3,7 @@
 var gulp        = require('gulp'),
     config      = require('../config'),
     plumber     = require('gulp-plumber'),
-    helpers     = require('../helpers'),
+    helpers     = require('../util/helpers'),
     gulpif      = require('gulp-if'),
     gutil       = require('gulp-util'),
     sourcemaps  = require('gulp-sourcemaps'),

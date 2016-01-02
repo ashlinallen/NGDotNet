@@ -11,7 +11,7 @@ function getBowerPackageIds() {
     var bowerManifest = {};
     
     try {
-        bowerManifest = require('../bower.json');
+        bowerManifest = require('../../bower.json');
     } catch (e) {
         // does not have a bower.json manifest
     }
@@ -26,7 +26,7 @@ function getNPMPackageIds() {
     var packageManifest = {};
     
     try {
-        packageManifest = require('./package.json');
+        packageManifest = require('../package.json');
     } catch (e) {
         // does not have a package.json manifest
     }
