@@ -26,6 +26,8 @@ build/
 [Oo]bj/
 gulp_build/
 NGDotNet.Web/index.html
+NGDotNet.Web/favicon.ico
+NGDotNet.Web/favicon_large.ico
 NGDotNet.Web/app/templates.js
 
 # MSTest test Results

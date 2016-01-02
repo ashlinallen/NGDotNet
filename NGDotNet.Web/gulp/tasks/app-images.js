@@ -10,6 +10,11 @@ var gulp        = require('gulp'),
 
 gulp.task('app-images', function() {
 
+    // Put our favicon.ico in the dist folder
+    gulp.src(['app/assets/Images/favicon.ico',
+              'app/assets/Images/favicon_large.ico'])
+        .pipe(gulp.dest('./'));
+
     return gulp
             .src(config.images.src)
             .pipe(plumber())

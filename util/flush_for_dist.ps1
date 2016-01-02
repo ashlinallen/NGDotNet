@@ -17,6 +17,14 @@ if((Test-Path "NGDotNet.Web\index.html")){
     cmd /c del "NGDotNet.Web\index.html" /q
     Write-Host "Removed: NGDotNet.Web\index.html" -foregroundcolor green
 }
+if((Test-Path "NGDotNet.Web\favicon.ico")){
+    cmd /c del "NGDotNet.Web\favicon.ico" /q
+    Write-Host "Removed: NGDotNet.Web\favicon.ico" -foregroundcolor green
+}
+if((Test-Path "NGDotNet.Web\favicon_large.ico")){
+    cmd /c del "NGDotNet.Web\favicon_large.ico" /q
+    Write-Host "Removed: NGDotNet.Web\favicon_large.ico" -foregroundcolor green
+}
 if((Test-Path "NGDotNet.Web\node_modules")){
     cmd /c rmdir "NGDotNet.Web\node_modules" /s /q
     Write-Host "Removed: node_modules" -foregroundcolor green
