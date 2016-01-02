@@ -57,7 +57,7 @@ var config = {
 
     'browserify': {
         'entries'   : ['./app/app.module.js'],
-        'bundleName': 'main.js',
+        'destFilename': 'main.js',
         'sourcemap' : true
     },
     

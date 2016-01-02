@@ -77,6 +77,6 @@ function buildScript(file) {
 
 gulp.task('app-scripts', function() {
 
-    return buildScript('main.js');
+    return buildScript(config.browserify.destFilename);
 
 });
