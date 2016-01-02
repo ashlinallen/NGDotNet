@@ -1,8 +1,27 @@
 {
-  "name": "NGDotNet",
-  "version": "0.0.1",
+  "authors": [
+    "Ashlin Allen"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-animate": "~1.4.8",
+    "angular-bootstrap": "~0.14.3",
+    "angular-route": "~1.4.8",
+    "angular-sanitize": "~1.4.8",
+    "bootstrap": "~3.3.6",
+    "extras.angular.plus": "~0.9.3",
+    "font-awesome": "~4.5.0",
+    "jquery": "~2.1.4",
+    "moment": "~2.10.6",
+    "toastr": "~2.1.2"
+  },
   "description": "A demonstration scaffold for building AngularJS apps using Gulp, Browserify, C#/.NET and Entity Framework 6.",
-  "main": "app.js",
+  "homepage": "http://blog.ashlinallen.com/",
+  "ignore": [
+    "**/.*",
+    "test",
+    "tests"
+  ],
   "keywords": [
     "AngularJS",
     ".NET",
@@ -11,29 +30,9 @@
     "Browserify",
     "Visual Studio"
   ],
-  "authors": [
-    "Ashlin Allen"
-  ],
   "license": "",
-  "homepage": "http://blog.ashlinallen.com/",
-  "ignore": [
-    "**/.*",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "angular": "~1.4.8",
-    "angular-animate": "~1.4.8",
-    "angular-route": "~1.4.8",
-    "angular-sanitize": "~1.4.8",
-    "angular-bootstrap": "~0.14.3",
-    "extras.angular.plus": "~0.9.3",
-    "jquery": "~2.1.4",
-    "moment": "~2.10.6",
-    "bootstrap": "~3.3.6",
-    "font-awesome": "~4.5.0",
-    "toastr": "~2.1.2"
-  },
+  "main": "app.js",
+  "name": "NGDotNet",
   "overrides": {
     "bootstrap": {
       "main": [
@@ -45,5 +44,6 @@
         "./css/font-awesome.min.css"
       ]
     }
-  }
+  },
+  "version": "0.0.1"
 }

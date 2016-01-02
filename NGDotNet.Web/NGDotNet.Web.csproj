@@ -170,7 +170,7 @@
     <Content Include="bower.json" />
     <Content Include="gulpfile.js" />
     <Content Include="gulp\config.js" />
-    <Content Include="gulp\helpers.js" />
+    <Content Include="gulp\util\helpers.js" />
     <Content Include="gulp\index.js" />
     <Content Include="gulp\tasks\app-fonts.js" />
     <Content Include="gulp\tasks\app-images.js" />
@@ -189,7 +189,6 @@
     <Content Include="gulp\tasks\prod.js" />
     <Content Include="gulp\tasks\watch.js" />
     <Content Include="gulp\util\bundleLogger.js" />
-    <Content Include="gulp\util\handleErrors.js" />
     <Content Include="gulp\util\scriptFilter.js" />
     <Content Include="package.json" />
     <Content Include="packages.config">
