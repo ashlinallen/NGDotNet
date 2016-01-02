@@ -7,13 +7,13 @@ var gulp        = require('gulp'),
 gulp.task('browserSync', function() {
 
     return browserSync({
-        proxy: 'ngdotnet.local',
-        port: config.browserPort,
+        proxy: config.browserSync.proxyServer,
+        port: config.browserSync.browserPort,
         ui: {
-            port: config.UIPort
+            port: config.browserSync.UIPort
         },
         logPrefix: "BrowserSync",
-        browser: ["google chrome"],
+        browser: config.browserSync.debugBrowsers,
         notify: true
     });
 

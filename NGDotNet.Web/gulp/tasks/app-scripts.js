@@ -1,19 +1,19 @@
 'use strict';
 
-var gulp            = require('gulp'),
-    config          = require('../config'),
-    helpers         = require('../helpers'),
-    gulpif          = require('gulp-if'),
-    gutil           = require('gulp-util'),
-    sourcemaps      = require('gulp-sourcemaps'),
-    streamify       = require('gulp-streamify'),
-    uglify          = require('gulp-uglify'),
-    source          = require('vinyl-source-stream'),
-    buffer          = require('vinyl-buffer'),
-    watchify        = require('watchify'),
-    browserify      = require('browserify'),
-    browserSync     = require('browser-sync'),
-    handleErrors    = require('../util/handleErrors');
+var gulp        = require('gulp'),
+    config      = require('../config'),
+    plumber     = require('gulp-plumber'),
+    helpers     = require('../helpers'),
+    gulpif      = require('gulp-if'),
+    gutil       = require('gulp-util'),
+    sourcemaps  = require('gulp-sourcemaps'),
+    streamify   = require('gulp-streamify'),
+    uglify      = require('gulp-uglify'),
+    source      = require('vinyl-source-stream'),
+    buffer      = require('vinyl-buffer'),
+    watchify    = require('watchify'),
+    browserify  = require('browserify'),
+    browserSync = require('browser-sync');
 
 // Based on: http://blog.avisi.nl/2014/04/25/how-to-keep-a-fast-build-with-browserify-and-reactjs/
 function buildScript(file) {
@@ -58,16 +58,17 @@ function buildScript(file) {
 
         gutil.log('Rebundle app...');
 
-        return stream.on('error', handleErrors)
-            .pipe(source(file))
-            .pipe(gulpif(createSourcemap, buffer()))
-            .pipe(gulpif(createSourcemap, sourcemaps.init()))
-            .pipe(gulpif(global.isProd, streamify(uglify({
-                compress: { drop_console: true }
-            }))))
-            .pipe(gulpif(createSourcemap, sourcemaps.write('./')))
-            .pipe(gulp.dest(config.scripts.dest))
-            .pipe(browserSync.reload({ stream: true, once: true }));
+        return stream
+                .pipe(plumber())
+                .pipe(source(file))
+                .pipe(gulpif(createSourcemap, buffer()))
+                .pipe(gulpif(createSourcemap, sourcemaps.init()))
+                .pipe(gulpif(global.isProd, streamify(uglify({
+                    compress: { drop_console: true }
+                }))))
+                .pipe(gulpif(createSourcemap, sourcemaps.write('./')))
+                .pipe(gulp.dest(config.scripts.dest))
+                .pipe(browserSync.reload({ stream: true, once: true }));
     }
 
     return rebundle();

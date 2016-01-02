@@ -1,19 +1,25 @@
 'use strict';
 
 var config = {
+    'serverPort': 8080,
 
-    'browserPort'  : 3000,
-    'UIPort'       : 3001,
-    'serverPort'   : 8080,
+    'browserSync': {
+        'debugBrowsers': ["google chrome"],
+        'browserPort': 3000,
+        'UIPort': 3001,
+        'proxyServer': 'ngdotnet.local'
+    },
 
     'styles': {
         'src' : 'app/assets/styles/**/*.scss',
-        'dest': 'gulp_build/css'
+        'dest': 'gulp_build/css',
+        'vendorDestFilename': 'vendor.css'
     },
 
     'scripts': {
         'src' : 'app/**/*.js',
-        'dest': 'gulp_build/js'
+        'dest': 'gulp_build/js',
+        'vendorDestFilename': 'vendor.js'
     },
 
     'images': {
@@ -53,8 +59,11 @@ var config = {
         'entries'   : ['./app/app.module.js'],
         'bundleName': 'main.js',
         'sourcemap' : true
-    }
+    },
     
+    'autoPrefixer': {
+        'options': { browsers: ['last 2 versions', '> 5%', 'ie > 8'] }
+    }
 };
 
 module.exports = config;

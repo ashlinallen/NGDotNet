@@ -2,6 +2,7 @@
 
 var gulp         = require('gulp'),
     config       = require('../config'),
+    plumber      = require('gulp-plumber'),
     helpers      = require('../helpers'),
     gulpif       = require('gulp-if'),
     gutil        = require('gulp-util'),
@@ -12,10 +13,7 @@ var gulp         = require('gulp'),
     browserSync  = require('browser-sync'),
     fileExists   = require('file-exists'),
     source       = require('vinyl-source-stream'),
-    bowerResolve = require('bower-resolve'),
-    handleErrors = require('../util/handleErrors');
-
-//process.env.BROWSERIFYSHIM_DIAGNOSTICS=1
+    bowerResolve = require('bower-resolve');
 
 gulp.task('bower-scripts', function() {
     // this task will go through ./bower.json and
@@ -26,6 +24,8 @@ gulp.task('bower-scripts', function() {
         // generate source maps in non-production environment
         debug: !global.isProd
     });
+
+    //process.env.BROWSERIFYSHIM_DIAGNOSTICS = 1; //this can be useful for diagnosing browserify-shim problems
 
     // get all bower components ids and use 'bower-resolve' to resolve
     // the ids to their full path, which we need for require()
@@ -50,10 +50,11 @@ gulp.task('bower-scripts', function() {
     var stream = bundler.bundle();
     var createSourcemap = global.isProd && config.browserify.sourcemap;
 
-    return stream.on('error', handleErrors)
-        .pipe(source('vendor.js'))
-        .pipe(gulpif(global.isProd, streamify(uglify({
-            compress: { drop_console: true }
-        }))))
-        .pipe(gulp.dest(config.scripts.dest));
+    return stream
+            .pipe(plumber())
+            .pipe(source(config.scripts.vendorDestFilename))
+            .pipe(gulpif(global.isProd, streamify(uglify({
+                compress: { drop_console: true }
+            }))))
+            .pipe(gulp.dest(config.scripts.dest));
 });
