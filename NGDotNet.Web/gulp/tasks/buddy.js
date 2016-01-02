@@ -11,7 +11,7 @@ gulp.task('buddy', function() {
             .src([config.scripts.src, '!app/js/templates.js'])
             .pipe(plumber())
             .pipe(buddyjs({
-                reporter: 'detailed'
+                reporter: 'simple'
             }));
     
 });
