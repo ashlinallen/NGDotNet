@@ -26,7 +26,7 @@ build/
 [Oo]bj/
 gulp_build/
 NGDotNet.Web/index.html
-app/templates.js
+NGDotNet.Web/app/templates.js
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
