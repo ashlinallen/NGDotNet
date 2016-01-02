@@ -7,14 +7,14 @@ var gulp = require('gulp'),
     jscs = require('gulp-jscs'),
     stylish = require('gulp-jscs-stylish');
 
-gulp.task('lint', function () {
+gulp.task('lint-scripts', function () {
 
     return gulp
             .src([config.scripts.src, '!app/js/templates.js'])
             .pipe(plumber())
-		    .pipe(jshint())
-		    .pipe(jscs())
-		    .pipe(stylish.combineWithHintResults())
+            .pipe(jshint())
+            .pipe(jscs())
+            .pipe(stylish.combineWithHintResults())
             .pipe(jshint.reporter('jshint-stylish'));
 
 });
