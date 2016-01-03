@@ -2,14 +2,14 @@
 
 var gulp    = require('gulp'),
     config  = require('../config'),
-    plumber = require('gulp-plumber'),
-    buddyjs = require('gulp-buddy.js');
+    buddyjs = require('gulp-buddy.js'),
+    plugins = require('gulp-load-plugins')();
 
 gulp.task('buddy', function() {
     
     return gulp
             .src([config.scripts.src, '!app/js/templates.js'])
-            .pipe(plumber())
+            .pipe(plugins.plumber())
             .pipe(buddyjs({
                 reporter: 'simple'
             }));

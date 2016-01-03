@@ -2,12 +2,8 @@
 
 var gulp         = require('gulp'),
     config       = require('../config'),
-    plumber      = require('gulp-plumber'),
+    plugins      = require('gulp-load-plugins')(),
     helpers      = require('../util/helpers'),
-    gulpif       = require('gulp-if'),
-    gutil        = require('gulp-util'),
-    streamify    = require('gulp-streamify'),
-    uglify       = require('gulp-uglify'),
     source       = require('vinyl-source-stream'),
     browserify   = require('browserify'),
     browserSync  = require('browser-sync'),
@@ -51,9 +47,9 @@ gulp.task('bower-scripts', function() {
     var createSourcemap = global.isProd && config.browserify.sourcemap;
 
     return stream
-            .pipe(plumber())
+            .pipe(plugins.plumber())
             .pipe(source(config.scripts.vendorDestFilename))
-            .pipe(gulpif(global.isProd, streamify(uglify({
+            .pipe(plugins.if(global.isProd, plugins.streamify(plugins.uglify({
                 compress: { drop_console: true }
             }))))
             .pipe(gulp.dest(config.scripts.dest));

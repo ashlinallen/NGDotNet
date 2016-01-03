@@ -1,10 +1,8 @@
 'use strict';
 
-var gulp          = require('gulp'),
-    config        = require('../config'),
-    plumber       = require('gulp-plumber'),
-    templateCache = require('gulp-angular-templatecache'),
-    htmlclean     = require('gulp-htmlclean');
+var gulp    = require('gulp'),
+    config  = require('../config'),
+    plugins = require('gulp-load-plugins')();
 
 // Views task
 gulp.task('app-views', function() {
@@ -16,12 +14,12 @@ gulp.task('app-views', function() {
     // Process any other view files from app/views
     return gulp
             .src(config.views.src)
-            .pipe(plumber())
-            .pipe(templateCache({
+            .pipe(plugins.plumber())
+            .pipe(plugins.angularTemplatecache({
                 standalone: true,
                 moduleSystem: 'Browserify'
             }))
-            .pipe(htmlclean())
+            .pipe(plugins.htmlclean())
             .pipe(gulp.dest(config.views.dest));
 
 });

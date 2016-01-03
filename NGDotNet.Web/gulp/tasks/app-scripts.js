@@ -2,13 +2,8 @@
 
 var gulp        = require('gulp'),
     config      = require('../config'),
-    plumber     = require('gulp-plumber'),
+    plugins     = require('gulp-load-plugins')(),
     helpers     = require('../util/helpers'),
-    gulpif      = require('gulp-if'),
-    gutil       = require('gulp-util'),
-    sourcemaps  = require('gulp-sourcemaps'),
-    streamify   = require('gulp-streamify'),
-    uglify      = require('gulp-uglify'),
     source      = require('vinyl-source-stream'),
     buffer      = require('vinyl-buffer'),
     watchify    = require('watchify'),
@@ -56,17 +51,17 @@ function buildScript(file) {
         var stream = bundler.bundle();
         var createSourcemap = global.isProd && config.browserify.sourcemap;
 
-        gutil.log('Rebundle app...');
+        plugins.util.log('Rebundle app...');
 
         return stream
-                .pipe(plumber())
+                .pipe(plugins.plumber())
                 .pipe(source(file))
-                .pipe(gulpif(createSourcemap, buffer()))
-                .pipe(gulpif(createSourcemap, sourcemaps.init()))
-                .pipe(gulpif(global.isProd, streamify(uglify({
+                .pipe(plugins.if(createSourcemap, buffer()))
+                .pipe(plugins.if(createSourcemap, plugins.sourcemaps.init()))
+                .pipe(plugins.if(global.isProd, plugins.streamify(plugins.uglify({
                     compress: { drop_console: true }
                 }))))
-                .pipe(gulpif(createSourcemap, sourcemaps.write('./')))
+                .pipe(plugins.if(createSourcemap, plugins.sourcemaps.write('./')))
                 .pipe(gulp.dest(config.scripts.dest))
                 .pipe(browserSync.reload({ stream: true, once: true }));
     }

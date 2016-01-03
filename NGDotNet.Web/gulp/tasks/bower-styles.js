@@ -2,18 +2,16 @@
 
 var gulp        = require('gulp'),
     config      = require('../config'),
-    plumber     = require('gulp-plumber'),
-    concat      = require('gulp-concat'),
+    plugins     = require('gulp-load-plugins')(),
     bower       = require('main-bower-files'),
-    browserSync = require('browser-sync'),
-    using       = require('gulp-using');
+    browserSync = require('browser-sync');
 
 gulp.task('bower-styles', function () {
 
     return gulp
             .src(bower('**/*.css'))
-            .pipe(plumber())
-            .pipe(concat(config.styles.vendorDestFilename))
+            .pipe(plugins.plumber())
+            .pipe(plugins.concat(config.styles.vendorDestFilename))
             .pipe(gulp.dest(config.styles.dest))
             .pipe(browserSync.reload({ stream: true }));
 
