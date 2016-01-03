@@ -170,6 +170,7 @@
     <Content Include="bower.json" />
     <Content Include="gulpfile.js" />
     <Content Include="gulp\config.js" />
+    <Content Include="gulp\tasks\buddy.js" />
     <Content Include="gulp\util\helpers.js" />
     <Content Include="gulp\index.js" />
     <Content Include="gulp\tasks\app-fonts.js" />
@@ -185,7 +186,7 @@
     <Content Include="gulp\tasks\deploy.js" />
     <Content Include="gulp\tasks\dev.js" />
     <Content Include="gulp\tasks\gzip.js" />
-    <Content Include="gulp\tasks\lint.js" />
+    <Content Include="gulp\tasks\lint-scripts.js" />
     <Content Include="gulp\tasks\prod.js" />
     <Content Include="gulp\tasks\watch.js" />
     <Content Include="gulp\util\bundleLogger.js" />
