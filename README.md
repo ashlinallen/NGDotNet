@@ -40,11 +40,16 @@ Install applications:
             [8] npm install bower -g
             [9]
 
+    Use NPM to install Gulp globally:
+        At an elevated command prompt:
+            npm install gulp -g
+            [TODO: GET SCREENSHOTS FOR THIS STEP]
+
     Install Visual Studio 2015 Community Edition:
         https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx
         Download and run the Visual Studio 2015 Community Edition installer
         [30] Check "Custom" then click Next
-        [31] Check "Microsoft SQL Server Data Tools" and "Microsoft Web Developer Tools" then click Next
+        [31] Check "Microsoft SQL Server Data Tools" and "Microsoft Web Developer Tools" then click Next [TODO: REVIEW THIS STEP, SQL SERVER DATA TOOLS MAY NOT HAVE BEEN NECESSARY]
         Click "Install" then click "Yes" on the User Account Control dialog
         [33]
         
@@ -75,7 +80,7 @@ Configure execution policy in PowerShell so you can run downloaded PowerShell sc
     Click 'Start'
     Type 'PowerShell'
     Right-click PowerShell.exe
-    [13] Click 'Run as Administrator' (Click 'Yes' on User Account Control dialog)
+    [13] Click 'Run as Administrator' (Click 'Yes' on User Account Control dialog) [TODO: REDO THIS SCREENSHOT]
 
     Run the following command in PowerShell to allow the execution of downloaded PS Scripts:
         [14] Set-ExecutionPolicy RemoteSigned
