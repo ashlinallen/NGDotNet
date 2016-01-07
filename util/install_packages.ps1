@@ -2,14 +2,9 @@ set-location ../NGDotNet.Web/
 
 Write-Host
 
-Write-Host "Restoring Node Modules..." -foregroundcolor DarkCyan
+Write-Host "Restoring NPM packages..." -foregroundcolor DarkCyan
 npm install --msvs_version=2015 --no-optional
-Write-Host "Node Modules installed." -foregroundcolor DarkCyan
-Write-Host
-
-Write-Host "Restoring Bower packages..." -foregroundcolor DarkCyan
-bower install
-Write-Host "Bower packages installed." -foregroundcolor DarkCyan
+Write-Host "NPM packages installed." -foregroundcolor DarkCyan
 Write-Host
 
 set-location ../

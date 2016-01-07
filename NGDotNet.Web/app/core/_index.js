@@ -1,7 +1,5 @@
 "use strict";
 
-var bulk = require('bulk-require');
-
 var coreModule = angular.module('app.core', [
     /*
      * Angular modules
@@ -18,5 +16,3 @@ var coreModule = angular.module('app.core', [
 ]);
 
 module.exports = coreModule;
-
-bulk(__dirname, ['./**/!(*_index|*.spec).js']);

@@ -1,21 +1,8 @@
 "use strict";
 
-require('jquery');
-require('angular');
-require('angular-animate');
-require('angular-route');
-require('angular-sanitize');
-require('extras.angular.plus');
-
-require('./templates');
-require('./avengers/_index');
-require('./blocks/exception/_index');
-require('./blocks/logger/_index');
-require('./blocks/router/_index');
-require('./core/_index');
-require('./dashboard/_index');
-require('./layout/_index');
-require('./widgets/_index');
+require('bootstrap/dist/css/bootstrap.css');
+require('./assets/Styles/customtheme.scss');
+require('./assets/Styles/styles.scss');
 
 angular.element(document).ready(function() {
     // mount on window for testing
@@ -33,7 +20,6 @@ angular.element(document).ready(function() {
          * but this is easier to maintain.
          */
         'ngRoute',
-        'templates',
         'app.core',
         'app.widgets',
 
@@ -45,6 +31,5 @@ angular.element(document).ready(function() {
         'app.layout'
     ]);
 
-    //angular.bootstrap(document, ['app'], { debugInfoEnabled: true });
-    angular.bootstrap(document, ['app']);
+    angular.bootstrap(document, ['app'], { debugInfoEnabled: true });
 });

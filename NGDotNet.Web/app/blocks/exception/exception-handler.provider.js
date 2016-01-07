@@ -33,7 +33,6 @@ function exceptionHandlerProvider() {
  * @param  {[type]} $provide
  * @return {[type]}
  */
-
 /* @ngInject */
 function config($provide) {
     $provide.decorator('$exceptionHandler', extendExceptionHandler);
