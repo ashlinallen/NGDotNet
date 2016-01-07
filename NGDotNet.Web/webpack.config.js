@@ -9,7 +9,7 @@ var config = {
     debug: false,
     context: path.join(__dirname),
     entry: {
-        'app': './app/_index.js',
+        'app': './app/app.module.js',
         'vendor': [
             'angular',
             'angular-animate',

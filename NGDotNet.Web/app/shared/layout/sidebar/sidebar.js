@@ -1,6 +1,6 @@
 "use strict";
 
-var layoutModule = require('../_index');
+var layoutModule = require('../layout.module.js');
 
 require('./sidebar.scss');
 

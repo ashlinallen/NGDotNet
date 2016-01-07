@@ -1,6 +1,6 @@
 "use strict";
 
-var loggerModule = require('./_index');
+var loggerModule = require('./logger.module.js');
 
 loggerModule.factory('logger', logger);
 

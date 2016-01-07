@@ -1,6 +1,6 @@
 "use strict";
 
-var routerModule = require('./_index');
+var routerModule = require('./router.module.js');
 
 routerModule
     .provider('routehelperConfig', routehelperConfig)

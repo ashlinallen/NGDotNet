@@ -1,6 +1,6 @@
 "use strict";
 
-var dashboardModule = require('./_index');
+var dashboardModule = require('./dashboard.module.js');
 
 dashboardModule.run(appRun);
 
@@ -14,7 +14,7 @@ function getRoutes() {
         {
             url: '/',
             config: {
-                template: require('./dashboard.html'), //templateUrl: 'dashboard/dashboard.html',
+                template: require('./dashboard.html'),
                 controller: 'Dashboard',
                 controllerAs: 'vm',
                 title: 'dashboard',

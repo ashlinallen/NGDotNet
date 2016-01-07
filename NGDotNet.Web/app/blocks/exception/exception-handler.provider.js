@@ -1,6 +1,6 @@
 "use strict";
 
-var exceptionModule = require('./_index');
+var exceptionModule = require('./exception.module.js');
 
 // Include in index.html so that app level exceptions are handled.
 // Exclude from testRunner.html which should run exactly what it wants to run
@@ -8,6 +8,7 @@ var exceptionModule = require('./_index');
 exceptionModule
     .provider('exceptionHandler', exceptionHandlerProvider)
     .config(config);
+
 
 /**
  * Must configure the exception handling
@@ -27,6 +28,7 @@ function exceptionHandlerProvider() {
     };
 }
 
+
 /**
  * Configure by setting an optional string value for appErrorPrefix.
  * Accessible via config.appErrorPrefix (via config value).
@@ -37,6 +39,7 @@ function exceptionHandlerProvider() {
 function config($provide) {
     $provide.decorator('$exceptionHandler', extendExceptionHandler);
 }
+
 
 /**
  * Extend the $exceptionHandler service to also display a toast.

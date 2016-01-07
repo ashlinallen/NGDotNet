@@ -1,16 +1,16 @@
 "use strict";
 
-var widgetsModule = require('./_index');
+var widgetsModule = require('./widgets.module.js');
 
-require('./ccWidgetClose.scss');
+require('./widget-close.scss');
 
-widgetsModule.directive('ccWidgetClose', ccWidgetClose);
+widgetsModule.directive('widgetClose', WidgetClose);
 
-function ccWidgetClose() {
+function WidgetClose() {
     // Usage:
-    // <a data-cc-widget-close></a>
+    // <a data-widget-close></a>
     // Creates:
-    // <a data-cc-widget-close="" href="#" class="wclose">
+    // <a data-widget-close="" href="#" class="wclose">
     //     <i class="fa fa-remove"></i>
     // </a>
     var directive = {

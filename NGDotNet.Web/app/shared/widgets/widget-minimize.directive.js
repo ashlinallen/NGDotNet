@@ -1,16 +1,16 @@
 "use strict";
 
-var widgetsModule = require('./_index');
+var widgetsModule = require('./widgets.module.js');
 
-require('./ccWidgetMinimize.scss');
+require('./widget-minimize.scss');
 
-widgetsModule.directive('ccWidgetMinimize', ccWidgetMinimize);
+widgetsModule.directive('widgetMinimize', WidgetMinimize);
 
-function ccWidgetMinimize() {
+function WidgetMinimize() {
     // Usage:
-    // <a data-cc-widget-minimize></a>
+    // <a data-widget-minimize></a>
     // Creates:
-    // <a data-cc-widget-minimize="" href="#"><i class="fa fa-chevron-up"></i></a>
+    // <a data-widget-minimize="" href="#"><i class="fa fa-chevron-up"></i></a>
     var directive = {
         link: link,
         template: '<i class="fa fa-chevron-up"></i>',

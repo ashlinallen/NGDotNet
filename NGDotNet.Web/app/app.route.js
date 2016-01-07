@@ -14,7 +14,7 @@ function getRoutes() {
         {
             url: '/',
             config: {
-                template: require('./components/dashboard/dashboard.html'), //templateUrl: 'dashboard/dashboard.html',
+                template: require('./components/dashboard/dashboard.html'),
                 controller: 'Dashboard',
                 controllerAs: 'vm',
                 title: 'dashboard',

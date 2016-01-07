@@ -1,0 +1,1 @@
+Do not put scripts here. Build your script into Angular.

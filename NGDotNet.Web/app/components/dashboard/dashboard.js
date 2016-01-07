@@ -1,6 +1,6 @@
 "use strict";
 
-var dashboardModule = require('./_index');
+var dashboardModule = require('./dashboard.module.js');
 
 require('./dashboard.scss');
 

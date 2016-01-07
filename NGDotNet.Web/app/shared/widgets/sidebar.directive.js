@@ -1,18 +1,18 @@
 "use strict";
 
-var widgetsModule = require('./_index');
+var widgetsModule = require('./widgets.module.js');
 
-require('./ccSidebar.scss');
+require('./sidebar.scss');
 
-widgetsModule.directive('ccSidebar', ccSidebar);
+widgetsModule.directive('sidebar', Sidebar);
 
-function ccSidebar() {
+function Sidebar() {
     // Opens and closes the sidebar menu.
     // Usage:
-    // <div data-cc-sidebar">
-    // <div data-cc-sidebar whenDoneAnimating="vm.sidebarReady()">
+    // <div data-sidebar">
+    // <div data-sidebar whenDoneAnimating="vm.sidebarReady()">
     // Creates:
-    // <div data-cc-sidebar class="sidebar">
+    // <div data-sidebar class="sidebar">
     var directive = {
         link: link,
         restrict: 'A',

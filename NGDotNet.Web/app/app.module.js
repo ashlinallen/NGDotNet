@@ -3,6 +3,9 @@
 require('bootstrap/dist/css/bootstrap.css');
 require('./assets/Styles/customtheme.scss');
 require('./assets/Styles/styles.scss');
+ 
+var modules = require.context('./', true, /\.js$/);
+modules.keys().forEach(modules);
 
 angular.element(document).ready(function() {
     // mount on window for testing

@@ -1,16 +1,16 @@
 "use strict";
 
-var widgetsModule = require('./_index');
+var widgetsModule = require('./widgets.module.js');
 
-require('./ccWidgetHeader.scss');
+require('./widget-header.scss');
 
-widgetsModule.directive('ccWidgetHeader', ccWidgetHeader);
+widgetsModule.directive('widgetHeader', WidgetHeader);
 
-function ccWidgetHeader() {
+function WidgetHeader() {
     // Usage:
-    // <div data-cc-widget-header title="vm.map.title"></div>
+    // <div data-widget-header title="vm.map.title"></div>
     // Creates:
-    // <div data-cc-widget-header=""
+    // <div data-widget-header=""
     //      title="Avengers Movie"
     //      allow-collapse="true" </div>
     var directive = {
@@ -21,7 +21,7 @@ function ccWidgetHeader() {
             'rightText': '@',
             'allowCollapse': '@'
         },
-        template: require('./ccWidgetHeader.html'), //templateUrl: 'widgets/widgetheader.html',
+        template: require('./widget-header.html'),
         restrict: 'A'
     };
     

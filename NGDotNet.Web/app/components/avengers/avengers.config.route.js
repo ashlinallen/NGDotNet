@@ -1,6 +1,6 @@
 "use strict";
 
-var avengersModule = require('./_index');
+var avengersModule = require('./avengers.module.js');
 
 avengersModule.run(appRun);
 
@@ -14,7 +14,7 @@ function getRoutes() {
         {
             url: '/avengers',
             config: {
-                template: require('./avengers.html'), //templateUrl: 'avengers/avengers.html',
+                template: require('./avengers.html'),
                 controller: 'Avengers',
                 controllerAs: 'vm',
                 title: 'avengers',

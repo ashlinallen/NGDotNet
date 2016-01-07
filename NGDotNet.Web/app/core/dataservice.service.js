@@ -1,6 +1,6 @@
 "use strict";
 
-var coreModule = require('./_index');
+var coreModule = require('./core.module.js');
 
 coreModule.factory('dataservice', dataservice);
 

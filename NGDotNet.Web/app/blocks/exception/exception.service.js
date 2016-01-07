@@ -1,6 +1,6 @@
 "use strict";
 
-var exceptionModule = require('./_index');
+var exceptionModule = require('./exception.module.js');
 
 exceptionModule.factory('exception', exception);
 

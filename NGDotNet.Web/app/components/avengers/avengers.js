@@ -1,6 +1,6 @@
 "use strict";
 
-var avengersModule = require('./_index');
+var avengersModule = require('./avengers.module.js');
 
 require('./avengers.scss');
 
