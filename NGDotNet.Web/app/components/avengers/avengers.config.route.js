@@ -1,22 +1,24 @@
-"use strict";
+'use strict';
 
 var avengersModule = require('./avengers.module.js');
 
 avengersModule.run(appRun);
 
-/* @ngInject */
-function appRun(routehelper) {
-    routehelper.configureRoutes(getRoutes());
+appRun.$inject = ['statehelper'];
+function appRun(statehelper) {
+    statehelper.configureStates(getStates());
 }
 
-function getRoutes() {
+function getStates() {
     return [
         {
-            url: '/avengers',
+            name: 'avengers',
             config: {
                 template: require('./avengers.html'),
                 controller: 'Avengers',
                 controllerAs: 'vm',
+                parent: 'rootLayout',
+                url: '/avengers',
                 title: 'avengers',
                 settings: {
                     nav: 2,

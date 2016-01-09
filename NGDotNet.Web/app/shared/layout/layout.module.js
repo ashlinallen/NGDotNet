@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var layoutModule = angular.module('app.layout', []);
 

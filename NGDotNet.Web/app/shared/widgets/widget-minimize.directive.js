@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var widgetsModule = require('./widgets.module.js');
 
@@ -10,7 +10,7 @@ function WidgetMinimize() {
     // Usage:
     // <a data-widget-minimize></a>
     // Creates:
-    // <a data-widget-minimize="" href="#"><i class="fa fa-chevron-up"></i></a>
+    // <a data-widget-minimize='' href='#'><i class='fa fa-chevron-up'></i></a>
     var directive = {
         link: link,
         template: '<i class="fa fa-chevron-up"></i>',

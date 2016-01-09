@@ -1,5 +1,5 @@
-"use strict";
+'use strict';
 
-var routerModule = angular.module('blocks.router', ['ngRoute', 'blocks.logger']);
+var routerModule = angular.module('blocks.router', ['ui.router', 'blocks.logger']);
 
 module.exports = routerModule;

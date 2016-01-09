@@ -1,14 +1,6 @@
-"use strict";
+'use strict';
 
 var coreModule = require('./core.module.js');
-
-coreModule.config(toastrConfig);
-
-/* @ngInject */
-function toastrConfig(toastr) {
-    toastr.options.timeOut = 4000;
-    toastr.options.positionClass = 'toast-bottom-right';
-}
 
 var config = {
     appErrorPrefix: '[NG-Modular Error] ', //Configure the exceptionHandler decorator
@@ -20,25 +12,29 @@ coreModule.value('config', config);
 
 coreModule.config(configure);
 
-/* @ngInject */
-function configure($logProvider, $routeProvider, $locationProvider, routehelperConfigProvider, exceptionHandlerProvider) {
-    // turn debugging off/on (no info or warn)
-    if ($logProvider.debugEnabled) {
-        $logProvider.debugEnabled(true);
-    }
+configure.$inject = ['$compileProvider', '$logProvider', '$urlRouterProvider', '$stateProvider', '$locationProvider', 'statehelperConfigProvider', 'exceptionHandlerProvider'];
+function configure($compileProvider, $logProvider, $urlRouterProvider, $stateProvider, $locationProvider, statehelperConfigProvider, exceptionHandlerProvider) {
+    var resolveAlways = {
+        ready: ['dataservice', function (dataservice) {
+            return dataservice.ready();
+        }]
+    };
 
     // Configure the common route provider
-    routehelperConfigProvider.config.$routeProvider = $routeProvider;
-    routehelperConfigProvider.config.docTitle = 'NG-Modular: ';
-    var resolveAlways = {/* @ngInject */
-        ready: function (dataservice) {
-            return dataservice.ready();
-        }
-    };
-    routehelperConfigProvider.config.resolveAlways = resolveAlways;
+    statehelperConfigProvider.config = {
+        $stateProvider: $stateProvider,
+        docTitle: 'NG-Modular: ',
+        resolveAlways: resolveAlways
+    }
 
     // Configure the common exception handler
     exceptionHandlerProvider.configure(config.appErrorPrefix);
-
+    
+    // turn debugging off/on (no info or warn)
+    $logProvider.debugEnabled(false);
+    $compileProvider.debugInfoEnabled(false);
+    
     $locationProvider.html5Mode(true);
+    
+    $urlRouterProvider.otherwise('/dashboard');
 }

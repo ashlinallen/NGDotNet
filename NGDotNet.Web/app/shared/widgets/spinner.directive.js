@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var widgetsModule = require('./widgets.module.js');
 
@@ -6,12 +6,12 @@ require('./spinner.scss');
 
 widgetsModule.directive('spinner', Spinner);
 
-/* @ngInject */
+Spinner.$inject = ['$window'];
 function Spinner($window) {
     // Description:
     // Creates a new Spinner and sets its options
     // Usage:
-    // <div data-spinner="vm.spinnerOptions"></div>
+    // <div data-spinner='vm.spinnerOptions'></div>
     var directive = {
         link: link,
         restrict: 'A'

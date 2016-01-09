@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var avengersModule = angular.module('app.avengers', []);
 

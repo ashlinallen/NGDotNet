@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var layoutModule = require('../layout.module.js');
 
@@ -6,32 +6,32 @@ require('./sidebar.scss');
 
 layoutModule.controller('Sidebar', Sidebar);
 
-/* @ngInject */
-function Sidebar($route, routehelper) {
+Sidebar.$inject = ['$state', 'statehelper'];
+function Sidebar($state, statehelper) {
     var vm = this;
-    var routes = routehelper.getRoutes();
+    var states = statehelper.getStates();
     vm.isCurrent = isCurrent;
     //vm.sidebarReady = function(){console.log('done animating menu')}; // example
 
     activate();
 
     function activate() {
-        getNavRoutes();
+        getNavstates();
     }
 
-    function getNavRoutes() {
-        vm.navRoutes = routes.filter(function (r) {
+    function getNavstates() {
+        vm.navstates = states.filter(function (r) {
             return r.settings && r.settings.nav;
         }).sort(function (r1, r2) {
             return r1.settings.nav - r2.settings.nav;
         });
     }
 
-    function isCurrent(route) {
-        if (!route.title || !$route.current || !$route.current.title) {
+    function isCurrent(state) {
+        if (!state.title || !$state.current || !$state.current.title) {
             return '';
         }
-        var menuName = route.title;
-        return $route.current.title.substr(0, menuName.length) === menuName ? 'current' : '';
+        var menuName = state.title;
+        return $state.current.title.substr(0, menuName.length) === menuName ? 'current' : '';
     }
 }

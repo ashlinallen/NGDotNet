@@ -21,8 +21,8 @@
   "scripts": {
     "clean": "rm dist/",
     "start": "webpack && http-server -p 8080",
-    "dev": "webpack-dev-server --devtool eval --display-error-details --progress --colors --hot --inline --quiet",
-    "prod": "webpack -p --config webpack.config.js --output-public-path /dist/",
+    "dev": "webpack-dev-server --devtool eval --display-error-details --progress --colors --hot --inline --config webpack.config.js",
+    "prod": "NODE_ENV=production webpack -p --config webpack.production.config.js --output-public-path /dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ashlin Allen",
@@ -30,7 +30,6 @@
     "url": "https://github.com/ashlinallen/NGDotNet.com/issues"
   },
   "devDependencies": {
-    "bulk-require": "^0.2.1",
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
     "fs": "0.0.2",
@@ -39,7 +38,6 @@
     "jshint-loader": "^0.8.3",
     "less": "^2.5.3",
     "less-loader": "^2.2.2",
-    "ng-annotate-webpack-plugin": "^0.1.2",
     "ng-cache-loader": "0.0.15",
     "node-sass": "^3.4.2",
     "sass-loader": "^3.1.2",
@@ -60,6 +58,7 @@
     "font-awesome-webpack": "0.0.4",
     "jquery": "^2.1.4",
     "moment": "^2.11.0",
-    "toastr": "^2.1.2"
+    "toastr": "^2.1.2",
+    "ui-router": "^0.2.15"
   }
 }

@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var dashboardModule = require('./dashboard.module.js');
 
@@ -6,7 +6,7 @@ require('./dashboard.scss');
 
 dashboardModule.controller('Dashboard', Dashboard);
 
-/* @ngInject */
+Dashboard.$inject = ['$q', 'dataservice', 'logger'];
 function Dashboard($q, dataservice, logger) {
     var vm = this;
 

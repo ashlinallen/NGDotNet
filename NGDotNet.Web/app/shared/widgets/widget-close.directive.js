@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var widgetsModule = require('./widgets.module.js');
 
@@ -10,8 +10,8 @@ function WidgetClose() {
     // Usage:
     // <a data-widget-close></a>
     // Creates:
-    // <a data-widget-close="" href="#" class="wclose">
-    //     <i class="fa fa-remove"></i>
+    // <a data-widget-close='' href='#' class='wclose'>
+    //     <i class='fa fa-remove'></i>
     // </a>
     var directive = {
         link: link,

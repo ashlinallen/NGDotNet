@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var avengersModule = require('./avengers.module.js');
 
@@ -6,7 +6,7 @@ require('./avengers.scss');
 
 avengersModule.controller('Avengers', Avengers);
 
-/* @ngInject */
+Avengers.$inject = ['dataservice', 'logger'];
 function Avengers (dataservice, logger) {
     var vm = this;
     vm.avengers = [];

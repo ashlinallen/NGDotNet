@@ -2,7 +2,7 @@
     /*box-shadow: none !important;
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false) !important;
     text-shadow: none !important;*/
-    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     /*font-weight: 400;*/
 }
@@ -14,22 +14,22 @@ input, select {
 }
 
 form * {
-    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
 }
 
 input, textarea {
     background-image: none !important;
     border: 1px solid #ccc !important;
-    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
 }
 
 select {
     font-size: 13px !important;
-    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
 }
 
 input {
-    &[type="radio"], &[type="checkbox"] {
+    &[type='radio'], &[type='checkbox'] {
         margin: 0 0 0 !important;
         margin-right: 5px !important;
         line-height: 23px !important;
@@ -39,7 +39,7 @@ input {
 
 .btn {
     background-image: none !important;
-    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
     font-size: 13px !important;
 
     &.btn-form-md {

@@ -1,10 +1,10 @@
-"use strict";
+'use strict';
 
 var coreModule = angular.module('app.core', [
     /*
      * Angular modules
      */
-    'ngAnimate', 'ngRoute', 'ngSanitize',
+    'ngAnimate', 'ngSanitize',
     /*
      * Our reusable cross app code modules
      */
@@ -12,7 +12,7 @@ var coreModule = angular.module('app.core', [
     /*
      * 3rd Party modules
      */
-    'ngplus'
+    'ui.router', 'ngplus'
 ]);
 
 module.exports = coreModule;

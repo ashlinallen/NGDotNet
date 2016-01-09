@@ -1,10 +1,10 @@
-"use strict";
+'use strict';
 
 var exceptionModule = require('./exception.module.js');
 
 exceptionModule.factory('exception', exception);
 
-/* @ngInject */
+exception.$inject = ['logger'];
 function exception(logger) {
     var service = {
         catcher: catcher

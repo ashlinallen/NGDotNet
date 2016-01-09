@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var widgetsModule = angular.module('app.widgets', []);
 

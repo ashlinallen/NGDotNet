@@ -1,22 +1,24 @@
-"use strict";
+'use strict';
 
 var dashboardModule = require('./dashboard.module.js');
 
 dashboardModule.run(appRun);
 
-/* @ngInject */
-function appRun(routehelper) {
-    routehelper.configureRoutes(getRoutes());
+appRun.$inject = ['statehelper'];
+function appRun(statehelper) {
+    statehelper.configureStates(getStates());
 }
 
-function getRoutes() {
+function getStates() {
     return [
         {
-            url: '/',
+            name: 'dashboard',
             config: {
                 template: require('./dashboard.html'),
                 controller: 'Dashboard',
                 controllerAs: 'vm',
+                parent: 'rootLayout',
+                url: '/dashboard',
                 title: 'dashboard',
                 settings: {
                     nav: 1,

@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var widgetsModule = require('./widgets.module.js');
 
@@ -9,10 +9,10 @@ widgetsModule.directive('sidebar', Sidebar);
 function Sidebar() {
     // Opens and closes the sidebar menu.
     // Usage:
-    // <div data-sidebar">
-    // <div data-sidebar whenDoneAnimating="vm.sidebarReady()">
+    // <div data-sidebar'>
+    // <div data-sidebar whenDoneAnimating='vm.sidebarReady()'>
     // Creates:
-    // <div data-sidebar class="sidebar">
+    // <div data-sidebar class='sidebar'>
     var directive = {
         link: link,
         restrict: 'A',

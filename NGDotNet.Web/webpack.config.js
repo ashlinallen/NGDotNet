@@ -1,15 +1,14 @@
 'use strict';
 
 var path = require('path'),
-    webpack = require('webpack'),
-    ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
+    webpack = require('webpack');
 
 var config = {
     cache: true,
     debug: false,
     context: path.join(__dirname),
     entry: {
-        'app': './app/app.module.js',
+        'app': './app/_index.js',
         'vendor': [
             'angular',
             'angular-animate',
@@ -21,7 +20,8 @@ var config = {
             'font-awesome-webpack',
             'jquery',
             'moment',
-            'toastr'
+            'toastr',
+            'ui-router'
         ]
     },
     output: {
@@ -34,8 +34,7 @@ var config = {
             { test: /\.html$/, loaders: ['ng-cache?prefix=[dir]/[dir]'] },
             { test: /\.css$/, loaders: ['style', 'css'] },
             { test: /\.scss$/, loaders: ['style', 'css', 'sass'] },
-            { test: /\.png$/, loader: 'url?limit=100000' },
-            { test: /\.jpg$/, loader: 'file' },
+            { test: /\.(png|jpg|jpeg|gif)$/, loader: 'url?limit=100000' },
             { test: /\.woff(2)?(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/font-woff" },
             { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream" },
             { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
@@ -44,7 +43,6 @@ var config = {
     },
     plugins: [
         new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery' }),
-        new ngAnnotatePlugin(),
         new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
         new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/)
     ]

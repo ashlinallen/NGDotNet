@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var layoutModule = require('../layout.module.js');
 
@@ -6,7 +6,7 @@ require('./shell.scss');
 
 layoutModule.controller('Shell', Shell);
 
-/* @ngInject */
+Shell.$inject = ['$timeout', 'config', 'logger'];
 function Shell($timeout, config, logger) {
     var vm = this;
 

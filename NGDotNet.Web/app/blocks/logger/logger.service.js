@@ -1,10 +1,10 @@
-"use strict";
+'use strict';
 
 var loggerModule = require('./logger.module.js');
 
 loggerModule.factory('logger', logger);
 
-/* @ngInject */
+logger.$inject = ['$log', 'toastr'];
 function logger($log, toastr) {
     var service = {
         showToasts: true,

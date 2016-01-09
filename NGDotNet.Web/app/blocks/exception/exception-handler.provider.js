@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var exceptionModule = require('./exception.module.js');
 
@@ -35,7 +35,7 @@ function exceptionHandlerProvider() {
  * @param  {[type]} $provide
  * @return {[type]}
  */
-/* @ngInject */
+config.$inject = ['$provide'];
 function config($provide) {
     $provide.decorator('$exceptionHandler', extendExceptionHandler);
 }
@@ -48,7 +48,7 @@ function config($provide) {
  * @param  {Object} logger
  * @return {Function} the decorated $exceptionHandler service
  */
-/* @ngInject */
+extendExceptionHandler.$inject = ['$delegate', 'exceptionHandler', 'logger'];
 function extendExceptionHandler($delegate, exceptionHandler, logger) {
     return function (exception, cause) {
         var appErrorPrefix = exceptionHandler.config.appErrorPrefix || '';

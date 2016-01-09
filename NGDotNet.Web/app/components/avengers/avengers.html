@@ -1,14 +1,14 @@
-﻿<section class="mainbar">
-    <section class="matter">
-        <div class="container">
-            <div class="row">
-                <div class="widget wblue">
-                    <div data-widget-header title="{{ vm.title }}"></div>
-                    <div class="widget-content user">
+﻿<section class='mainbar'>
+    <section class='matter'>
+        <div class='container'>
+            <div class='row'>
+                <div class='widget wblue'>
+                    <div data-widget-header title='{{ vm.title }}'></div>
+                    <div class='widget-content user'>
                         <!--Uncomment the following block to see JSON returned from server. -->
-                        <!--<pre>{{ vm.avengers | json}}</pre>-->
-                        <input data-ng-model="vm.filter" placeholder="Find Avengers by name" type="search" />
-                        <table class="table table-condensed table-striped">
+                        <!--<pre>{{ vm.avengers | json }}</pre>-->
+                        <input data-ng-model='vm.filter' placeholder='Find Avengers by name' type='search' />
+                        <table class='table table-condensed table-striped'>
                             <thead>
                                 <tr>
                                     <th></th>
@@ -17,20 +17,20 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr data-ng-repeat="c in vm.avengers | filter:vm.filter track by c.Id">
+                                <tr data-ng-repeat='c in vm.avengers | filter:vm.filter track by c.Id'>
                                     <td>
-                                        <img data-ng-src="/Images/Thumbnails/{{ c.Thumbnail }}" class="avenger-thumb img-rounded" />
+                                        <img data-ng-src='../../../assets/Images/Thumbnails/{{ c.Thumbnail }}' class='avenger-thumb img-rounded' />
                                     </td>
                                     <td>
-                                        <span class="avenger-name">{{ c.Name }}</span>
+                                        <span class='avenger-name'>{{ c.Name }}</span>
                                     </td>
                                     <td>{{ c.Description | limitTo: 2000 }} ...</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div class="widget-foot">
-                        <div class="clearfix"></div>
+                    <div class='widget-foot'>
+                        <div class='clearfix'></div>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var exceptionModule = angular.module('blocks.exception', ['blocks.logger']);
 

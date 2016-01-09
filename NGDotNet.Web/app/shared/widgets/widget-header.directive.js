@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var widgetsModule = require('./widgets.module.js');
 
@@ -8,11 +8,11 @@ widgetsModule.directive('widgetHeader', WidgetHeader);
 
 function WidgetHeader() {
     // Usage:
-    // <div data-widget-header title="vm.map.title"></div>
+    // <div data-widget-header title='vm.map.title'></div>
     // Creates:
-    // <div data-widget-header=""
-    //      title="Avengers Movie"
-    //      allow-collapse="true" </div>
+    // <div data-widget-header=''
+    //      title='Avengers Movie'
+    //      allow-collapse='true' </div>
     var directive = {
         //link: link,
         scope: {
