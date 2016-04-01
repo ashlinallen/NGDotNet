@@ -50,6 +50,7 @@
   <ItemGroup>
     <Folder Include="app\assets\Scripts\Custom\" />
     <Folder Include="app\assets\Scripts\Vendor\" />
+    <Folder Include="app\widgets\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
@@ -114,6 +115,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".jshintrc" />
     <Content Include="app\app.config.globalstyles.js" />
     <Content Include="app\app.config.route.js" />
     <Content Include="app\app.module.js" />
@@ -137,6 +139,7 @@
     <Content Include="app\assets\Styles\README.txt" />
     <Content Include="app\assets\Styles\styles.scss" />
     <Content Include="app\blocks\exception\exception-handler.provider.js" />
+    <Content Include="app\blocks\exception\exception-handler.provider.jsbak" />
     <Content Include="app\blocks\exception\exception.module.js" />
     <Content Include="app\blocks\exception\exception.service.js" />
     <Content Include="app\blocks\logger\logger.module.js" />
@@ -147,10 +150,12 @@
     <Content Include="app\components\avengers\avengers.html" />
     <Content Include="app\components\avengers\avengers.js" />
     <Content Include="app\components\avengers\avengers.module.js" />
+    <Content Include="app\components\avengers\avengers.scss" />
     <Content Include="app\components\dashboard\dashboard.config.route.js" />
     <Content Include="app\components\dashboard\dashboard.html" />
     <Content Include="app\components\dashboard\dashboard.js" />
     <Content Include="app\components\dashboard\dashboard.module.js" />
+    <Content Include="app\components\dashboard\dashboard.scss" />
     <Content Include="app\core\core.config.js" />
     <Content Include="app\core\core.constants.js" />
     <Content Include="app\core\core.module.js" />
@@ -160,24 +165,25 @@
     <Content Include="app\shared\layout\shell\shell.config.route.js" />
     <Content Include="app\shared\layout\shell\shell.html" />
     <Content Include="app\shared\layout\shell\shell.js" />
+    <Content Include="app\shared\layout\shell\shell.scss" />
     <Content Include="app\shared\layout\sidebar\sidebar.html" />
     <Content Include="app\shared\layout\sidebar\sidebar.js" />
+    <Content Include="app\shared\layout\sidebar\sidebar.scss" />
     <Content Include="app\shared\layout\topnav\topnav.html" />
     <Content Include="app\shared\layout\topnav\topnav.js" />
+    <Content Include="app\shared\layout\topnav\topnav.scss" />
     <Content Include="app\shared\widgets\sidebar\sidebar.directive.js" />
+    <Content Include="app\shared\widgets\sidebar\sidebar.scss" />
     <Content Include="app\shared\widgets\spinner\spinner.directive.js" />
+    <Content Include="app\shared\widgets\spinner\spinner.scss" />
     <Content Include="app\shared\widgets\widget-close\widget-close.directive.js" />
+    <Content Include="app\shared\widgets\widget-close\widget-close.scss" />
     <Content Include="app\shared\widgets\widget-header\widget-header.directive.js" />
     <Content Include="app\shared\widgets\widget-header\widget-header.html" />
+    <Content Include="app\shared\widgets\widget-header\widget-header.scss" />
     <Content Include="app\shared\widgets\widget-minimize\widget-minimize.directive.js" />
+    <Content Include="app\shared\widgets\widget-minimize\widget-minimize.scss" />
     <Content Include="app\shared\widgets\widgets.module.js" />
-    <Content Include="app\widgets\ccSidebar.js" />
-    <Content Include="app\widgets\ccSpinner.js" />
-    <Content Include="app\widgets\ccWidgetClose.js" />
-    <Content Include="app\widgets\ccWidgetHeader.js" />
-    <Content Include="app\widgets\ccWidgetMinimize.js" />
-    <Content Include="app\widgets\widgetheader.html" />
-    <Content Include="app\widgets\_index.js" />
     <Content Include="app\_index.js" />
     <Content Include="package.json" />
     <Content Include="packages.config">
@@ -191,18 +197,6 @@
     <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".jshintrc" />
-    <Content Include="app\blocks\exception\exception-handler.provider.jsbak" />
-    <Content Include="app\components\avengers\avengers.scss" />
-    <Content Include="app\components\dashboard\dashboard.scss" />
-    <Content Include="app\shared\layout\shell\shell.scss" />
-    <Content Include="app\shared\layout\sidebar\sidebar.scss" />
-    <Content Include="app\shared\layout\topnav\topnav.scss" />
-    <Content Include="app\shared\widgets\sidebar\sidebar.scss" />
-    <Content Include="app\shared\widgets\spinner\spinner.scss" />
-    <Content Include="app\shared\widgets\widget-close\widget-close.scss" />
-    <Content Include="app\shared\widgets\widget-header\widget-header.scss" />
-    <Content Include="app\shared\widgets\widget-minimize\widget-minimize.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
