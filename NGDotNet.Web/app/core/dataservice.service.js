@@ -4,7 +4,6 @@ var coreModule = require('./core.module.js');
 
 coreModule.factory('dataservice', dataservice);
 
-dataservice.$inject = ['$http', '$location', '$q', 'exception', 'logger'];
 function dataservice($http, $location, $q, exception, logger) {
     var isPrimed = false;
     var primePromise;
@@ -83,3 +82,5 @@ function dataservice($http, $location, $q, exception, logger) {
                 .catch(exception.catcher('"ready" function failed'));
     }
 }
+
+dataservice.$inject = ['$http', '$location', '$q', 'exception', 'logger'];

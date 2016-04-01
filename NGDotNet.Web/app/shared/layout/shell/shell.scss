@@ -1,0 +1,120 @@
+/**************************/
+/* start customtheme.scss */
+/**************************/
+
+/************************/
+/* end customtheme.scss */
+/************************/
+
+
+/*********************/
+/* start styles.scss */
+/*********************/
+
+
+/*#region Splash */
+#splash-page {
+    z-index: 99999 !important;
+
+    .bar {
+        width: 100%;
+    }
+}
+
+.page-splash {
+    z-index: 99999 !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    opacity: .9;
+    pointer-events: auto;
+    backface-visibility: hidden;
+    transition: opacity 0.3s linear;
+}
+
+.page-splash-message {
+    text-align: center;
+    margin: 20% auto 0 auto;
+    font-size: 400%;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-shadow: 2px 2px #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #F58A00;
+    padding: 0;
+
+    &.page-splash-message-subtle {
+        margin: 30% auto 0 auto;
+        font-size: 200%;
+    }
+}
+
+.ngplus-overlay-background {
+    top: 0px;
+    left: 0px;
+    padding-left: 100px;
+    position: absolute;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+    background-color: #808080;
+    opacity: 0.2;
+}
+
+.ngplus-overlay-content {
+    position: absolute;
+    /*border: 1px solid #000;*/
+    /*background-color: #fff;*/
+    font-weight: bold;
+    height: 100px;
+    width: 300px;
+    height: 15em;
+    width: 20em;
+    z-index: 10000;
+    text-align: center;
+}
+
+.page-spinner-message {
+    text-align: center;
+    font-size: 400%;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-shadow: 2px 2px #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #F58A00;
+    padding: 0;
+
+    &.page-spinner-message-subtle {
+        margin: 30% auto 0 auto;
+        font-size: 200%;
+    }
+}
+
+.overlay-message {
+    font-size: 200%;
+}
+/*#endregion*/
+@media (max-width: 767px) {
+    .page-splash-message {
+        font-size: 200%;
+        margin: 40% auto 0 auto;
+
+        &.page-splash-message-subtle {
+            font-size: 150%;
+        }
+    }
+}
+
+@media (max-width: 979px) {
+    .page-splash-message {
+        font-size: 300%;
+    }
+}
+/*********************/
+/* end styles.scss   */
+/*********************/

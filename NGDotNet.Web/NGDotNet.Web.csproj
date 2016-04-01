@@ -48,7 +48,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\assets\Fonts\" />
     <Folder Include="app\assets\Scripts\Custom\" />
     <Folder Include="app\assets\Scripts\Vendor\" />
   </ItemGroup>
@@ -71,7 +70,7 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\nuget_packages\Newtonsoft.Json.8.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\nuget_packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -115,10 +114,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".csslintrc" />
-    <Content Include=".jscsrc" />
-    <Content Include=".jshintrc" />
+    <Content Include="app\app.config.globalstyles.js" />
+    <Content Include="app\app.config.route.js" />
     <Content Include="app\app.module.js" />
+    <Content Include="app\assets\Fonts\README.txt" />
     <Content Include="app\assets\Images\AngularJS-small.png" />
     <Content Include="app\assets\Images\avengersicon-xs.png" />
     <Content Include="app\assets\Images\avengersicon.png" />
@@ -132,34 +131,46 @@
     <Content Include="app\assets\Images\Thumbnails\hulk.jpg" />
     <Content Include="app\assets\Images\Thumbnails\iron_man.jpg" />
     <Content Include="app\assets\Images\Thumbnails\thor.jpg" />
+    <Content Include="app\assets\index.template.html" />
+    <Content Include="app\assets\Scripts\README.txt" />
     <Content Include="app\assets\Styles\customtheme.scss" />
+    <Content Include="app\assets\Styles\README.txt" />
     <Content Include="app\assets\Styles\styles.scss" />
-    <Content Include="app\avengers\avengers.html" />
-    <Content Include="app\avengers\avengers.js" />
-    <Content Include="app\avengers\config.route.js" />
-    <Content Include="app\avengers\_index.js" />
     <Content Include="app\blocks\exception\exception-handler.provider.js" />
-    <Content Include="app\blocks\exception\exception.js" />
-    <Content Include="app\blocks\exception\_index.js" />
-    <Content Include="app\blocks\logger\logger.js" />
-    <Content Include="app\blocks\logger\_index.js" />
-    <Content Include="app\blocks\router\routehelper.js" />
-    <Content Include="app\blocks\router\_index.js" />
-    <Content Include="app\core\config.js" />
-    <Content Include="app\core\constants.js" />
-    <Content Include="app\core\dataservice.js" />
-    <Content Include="app\core\_index.js" />
-    <Content Include="app\dashboard\config.route.js" />
-    <Content Include="app\dashboard\dashboard.html" />
-    <Content Include="app\dashboard\dashboard.js" />
-    <Content Include="app\dashboard\_index.js" />
-    <Content Include="app\index.html" />
-    <Content Include="app\layout\shell.html" />
-    <Content Include="app\layout\shell.js" />
-    <Content Include="app\layout\sidebar.html" />
-    <Content Include="app\layout\sidebar.js" />
-    <Content Include="app\layout\topnav.html" />
-    <Content Include="app\layout\_index.js" />
+    <Content Include="app\blocks\exception\exception.module.js" />
+    <Content Include="app\blocks\exception\exception.service.js" />
+    <Content Include="app\blocks\logger\logger.module.js" />
+    <Content Include="app\blocks\logger\logger.service.js" />
+    <Content Include="app\blocks\router\router.module.js" />
+    <Content Include="app\blocks\router\statehelper.service.js" />
+    <Content Include="app\components\avengers\avengers.config.route.js" />
+    <Content Include="app\components\avengers\avengers.html" />
+    <Content Include="app\components\avengers\avengers.js" />
+    <Content Include="app\components\avengers\avengers.module.js" />
+    <Content Include="app\components\dashboard\dashboard.config.route.js" />
+    <Content Include="app\components\dashboard\dashboard.html" />
+    <Content Include="app\components\dashboard\dashboard.js" />
+    <Content Include="app\components\dashboard\dashboard.module.js" />
+    <Content Include="app\core\core.config.js" />
+    <Content Include="app\core\core.constants.js" />
+    <Content Include="app\core\core.module.js" />
+    <Content Include="app\core\dataservice.service.js" />
+    <Content Include="app\core\toastr.config.js" />
+    <Content Include="app\shared\layout\layout.module.js" />
+    <Content Include="app\shared\layout\shell\shell.config.route.js" />
+    <Content Include="app\shared\layout\shell\shell.html" />
+    <Content Include="app\shared\layout\shell\shell.js" />
+    <Content Include="app\shared\layout\sidebar\sidebar.html" />
+    <Content Include="app\shared\layout\sidebar\sidebar.js" />
+    <Content Include="app\shared\layout\topnav\topnav.html" />
+    <Content Include="app\shared\layout\topnav\topnav.js" />
+    <Content Include="app\shared\widgets\sidebar\sidebar.directive.js" />
+    <Content Include="app\shared\widgets\spinner\spinner.directive.js" />
+    <Content Include="app\shared\widgets\widget-close\widget-close.directive.js" />
+    <Content Include="app\shared\widgets\widget-header\widget-header.directive.js" />
+    <Content Include="app\shared\widgets\widget-header\widget-header.html" />
+    <Content Include="app\shared\widgets\widget-minimize\widget-minimize.directive.js" />
+    <Content Include="app\shared\widgets\widgets.module.js" />
     <Content Include="app\widgets\ccSidebar.js" />
     <Content Include="app\widgets\ccSpinner.js" />
     <Content Include="app\widgets\ccWidgetClose.js" />
@@ -167,22 +178,31 @@
     <Content Include="app\widgets\ccWidgetMinimize.js" />
     <Content Include="app\widgets\widgetheader.html" />
     <Content Include="app\widgets\_index.js" />
+    <Content Include="app\_index.js" />
     <Content Include="package.json" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="test\e2e\example_spec.js" />
-    <Content Include="test\e2e\routes_spec.js" />
-    <Content Include="test\karma.conf.js" />
-    <Content Include="test\protractor.conf.js" />
-    <Content Include="test\unit\constants_spec.js" />
-    <Content Include="test\unit\controllers\example_spec.js" />
-    <Content Include="test\unit\services\example_spec.js" />
+    <Content Include="paths.config.js" />
+    <Content Include="stylelint.config.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".jshintrc" />
+    <Content Include="app\blocks\exception\exception-handler.provider.jsbak" />
+    <Content Include="app\components\avengers\avengers.scss" />
+    <Content Include="app\components\dashboard\dashboard.scss" />
+    <Content Include="app\shared\layout\shell\shell.scss" />
+    <Content Include="app\shared\layout\sidebar\sidebar.scss" />
+    <Content Include="app\shared\layout\topnav\topnav.scss" />
+    <Content Include="app\shared\widgets\sidebar\sidebar.scss" />
+    <Content Include="app\shared\widgets\spinner\spinner.scss" />
+    <Content Include="app\shared\widgets\widget-close\widget-close.scss" />
+    <Content Include="app\shared\widgets\widget-header\widget-header.scss" />
+    <Content Include="app\shared\widgets\widget-minimize\widget-minimize.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

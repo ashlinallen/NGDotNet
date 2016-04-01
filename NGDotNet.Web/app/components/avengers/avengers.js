@@ -6,7 +6,6 @@ require('./avengers.scss');
 
 avengersModule.controller('Avengers', Avengers);
 
-Avengers.$inject = ['dataservice', 'logger'];
 function Avengers (dataservice, logger) {
     var vm = this;
     vm.avengers = [];
@@ -27,3 +26,5 @@ function Avengers (dataservice, logger) {
         });
     }
 }
+
+Avengers.$inject = ['dataservice', 'logger'];

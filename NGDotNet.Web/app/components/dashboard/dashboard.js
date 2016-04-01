@@ -6,7 +6,6 @@ require('./dashboard.scss');
 
 dashboardModule.controller('Dashboard', Dashboard);
 
-Dashboard.$inject = ['$q', 'dataservice', 'logger'];
 function Dashboard($q, dataservice, logger) {
     var vm = this;
 
@@ -42,3 +41,5 @@ function Dashboard($q, dataservice, logger) {
         });
     }
 }
+
+Dashboard.$inject = ['$q', 'dataservice', 'logger'];

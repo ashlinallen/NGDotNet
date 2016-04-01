@@ -4,7 +4,6 @@ var dashboardModule = require('./dashboard.module.js');
 
 dashboardModule.run(appRun);
 
-appRun.$inject = ['statehelper'];
 function appRun(statehelper) {
     statehelper.configureStates(getStates());
 }
@@ -28,3 +27,5 @@ function getStates() {
         }
     ];
 }
+
+appRun.$inject = ['statehelper'];

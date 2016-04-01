@@ -1,0 +1,210 @@
+/**************************/
+/* start customtheme.scss */
+/**************************/
+.sidebar {
+    width: 230px;
+    float: left;
+    display: block;
+    background: #111;
+    color: #eee;
+    position: relative;
+
+    hr {
+        border-bottom: 1px solid #333 !important;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        li {
+            list-style-type: none;
+        }
+    }
+
+    .sidebar-inner {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        z-index: 60;
+        background: #111;
+    }
+
+    .navi {
+        li {
+            i {
+                margin-right: 5px;
+            }
+
+            span i {
+                margin: 0;
+            }
+
+            ul {
+                display: none;
+                background: #181818;
+
+                li {
+                    a {
+                        display: block;
+                        background: none;
+                        padding: 10px 0;
+                        padding-left: 30px;
+                        text-decoration: none;
+                        color: #999;
+                        border-bottom: 1px solid #222;
+
+                        &:hover {
+                            background: #131313;
+                            border-bottom: 1px solid #222;
+                        }
+                    }
+
+                    &.active a {
+                        background: #131313;
+                        border-bottom: 1px solid #222;
+                    }
+                }
+            }
+
+            &.open ul {
+                display: block;
+            }
+        }
+
+        > li {
+            > a {
+                display: block;
+                padding: 12px 20px;
+                font-size: 15px;
+                line-height: 25px;
+                color: #fff;
+                text-decoration: none;
+                border-bottom: 1px solid #222;
+                background-color: #111;
+            }
+
+            > a:hover, &.open > a {
+                border-bottom: 1px solid #222;
+                background-color: #222;
+                color: #fff;
+            }
+
+            /* Sidebar colors */
+
+            &.nlightblue > a:hover,
+            &.open.nlightblue > a,
+            &.current.nlightblue > a {
+                background: #52b9e9 !important;
+                transition: background 0.5s ease;
+            }
+        }
+    }
+
+    /* Sidebar dropdown */
+    .sidebar-dropdown {
+        display: none;
+
+        * {
+            text-decoration: none;
+        }
+
+        a {
+            color: #ddd;
+            background-color: #343434;
+            padding: 6px;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 13px;
+            display: block;
+            border-top: 1px solid #666;
+            border-bottom: 1px solid #333;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    /* Sidebar widget */
+    .sidebar-widget {
+        padding: 10px 5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        float: none;
+        width: 100%;
+
+        .sidebar-dropdown {
+            display: block;
+        }
+
+        .sidebar-inner {
+            display: none;
+        }
+
+        .sidebar-widget {
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .sidebar {
+        width: 200px;
+    }
+}
+/************************/
+/* end customtheme.scss */
+/************************/
+
+
+/*********************/
+/* start styles.scss */
+/*********************/
+
+.sidebar {
+    margin-top: -2px;
+    .navi {
+        > li > a {
+            background-color: #333 !important;
+        }
+
+        li ul li {
+            a {
+                color: #fff;
+
+                &:hover {
+                    color: #52b9e9;
+                }
+
+                &:disabled {
+                    color: #999;
+                }
+            }
+        }
+    }
+
+    .sidebar-inner {
+        background-color: #333;
+    }
+}
+
+@media (max-width: 767px) {
+    .sidebar .sidebar-inner {
+        height: inherit;
+    }
+}
+
+@media (min-width: 768px) {
+    .sidebar .sidebar-inner {
+        display: block !important;
+    }
+}
+/*********************/
+/* end styles.scss   */
+/*********************/

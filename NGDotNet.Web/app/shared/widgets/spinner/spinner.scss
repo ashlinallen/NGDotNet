@@ -10,27 +10,7 @@
 /*********************/
 /* start styles.scss */
 /*********************/
-.sidebar-filler {
-    z-index: -1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background-color: #333;
-    width: 230px;
-}
 
-@media (max-width: 767px) {
-    .sidebar-filler {
-        display: none;
-    }
-}
-
-@media (max-width: 979px) {
-    .sidebar-filler {
-        width: 200px;
-    }
-}
 /*********************/
 /* end styles.scss   */
 /*********************/

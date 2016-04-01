@@ -12,7 +12,6 @@ coreModule.value('config', config);
 
 coreModule.config(configure);
 
-configure.$inject = ['$compileProvider', '$logProvider', '$urlRouterProvider', '$stateProvider', '$locationProvider', 'statehelperConfigProvider', 'exceptionHandlerProvider'];
 function configure($compileProvider, $logProvider, $urlRouterProvider, $stateProvider, $locationProvider, statehelperConfigProvider, exceptionHandlerProvider) {
     var resolveAlways = {
         ready: ['dataservice', function (dataservice) {
@@ -38,3 +37,5 @@ function configure($compileProvider, $logProvider, $urlRouterProvider, $statePro
     
     $urlRouterProvider.otherwise('/dashboard');
 }
+
+configure.$inject = ['$compileProvider', '$logProvider', '$urlRouterProvider', '$stateProvider', '$locationProvider', 'statehelperConfigProvider', 'exceptionHandlerProvider'];

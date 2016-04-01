@@ -4,7 +4,6 @@ var avengersModule = require('./avengers.module.js');
 
 avengersModule.run(appRun);
 
-appRun.$inject = ['statehelper'];
 function appRun(statehelper) {
     statehelper.configureStates(getStates());
 }
@@ -28,3 +27,5 @@ function getStates() {
         }
     ];
 }
+
+appRun.$inject = ['statehelper'];

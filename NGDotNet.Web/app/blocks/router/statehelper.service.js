@@ -22,7 +22,6 @@ function statehelperConfig() {
     };
 }
 
-statehelper.$inject = ['$location', '$rootScope', '$state', 'logger', 'statehelperConfig'];
 function statehelper($location, $rootScope, $state, logger, statehelperConfig) {
     var handlingStateChangeError = false;
     var stateCounts = {
@@ -54,16 +53,28 @@ function statehelper($location, $rootScope, $state, logger, statehelperConfig) {
         // On routing error, go to the dashboard.
         // Provide an exit clause if it tries to do it twice.
         $rootScope.$on('$stateChangeError',
-            function(event, current, previous, rejection) {
+            //function(event, current, previous, rejection) {
+            //    if (handlingStateChangeError) {
+            //        return;
+            //    }
+            //    stateCounts.errors++;
+            //    handlingStateChangeError = true;
+            //    var destination = (current && (current.title || current.name || current.loadedTemplateUrl)) ||
+            //        'unknown target';
+            //    var msg = 'Error routing to ' + destination + '. ' + (rejection.msg || '');
+            //    logger.warning(msg, [current]);
+            //    $location.path('/');
+            //}
+            function(event, toState, toParams, fromState, fromParams, error) {
                 if (handlingStateChangeError) {
                     return;
                 }
                 stateCounts.errors++;
                 handlingStateChangeError = true;
-                var destination = (current && (current.title || current.name || current.loadedTemplateUrl)) ||
+                var destination = (toState && (toState.title || toState.name || toState.loadedTemplateUrl)) ||
                     'unknown target';
-                var msg = 'Error routing to ' + destination + '. ' + (rejection.msg || '');
-                logger.warning(msg, [current]);
+                var msg = 'Error routing to ' + destination + '. ' + (error || '');
+                logger.warning(msg, [toState]);
                 $location.path('/');
             }
         );
@@ -98,3 +109,5 @@ function statehelper($location, $rootScope, $state, logger, statehelperConfig) {
         );
     }
 }
+
+statehelper.$inject = ['$location', '$rootScope', '$state', 'logger', 'statehelperConfig'];

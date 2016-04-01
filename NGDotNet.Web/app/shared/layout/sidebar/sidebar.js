@@ -6,7 +6,6 @@ require('./sidebar.scss');
 
 layoutModule.controller('Sidebar', Sidebar);
 
-Sidebar.$inject = ['$state', 'statehelper'];
 function Sidebar($state, statehelper) {
     var vm = this;
     var states = statehelper.getStates();
@@ -35,3 +34,5 @@ function Sidebar($state, statehelper) {
         return $state.current.title.substr(0, menuName.length) === menuName ? 'current' : '';
     }
 }
+
+Sidebar.$inject = ['$state', 'statehelper'];

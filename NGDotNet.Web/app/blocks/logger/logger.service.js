@@ -4,7 +4,6 @@ var loggerModule = require('./logger.module.js');
 
 loggerModule.factory('logger', logger);
 
-logger.$inject = ['$log', 'toastr'];
 function logger($log, toastr) {
     var service = {
         showToasts: true,
@@ -40,3 +39,5 @@ function logger($log, toastr) {
         $log.warn('Warning: ' + message, data);
     }
 }
+
+logger.$inject = ['$log', 'toastr'];

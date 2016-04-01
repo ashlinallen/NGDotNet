@@ -2,12 +2,13 @@
 
 var app = require('./app.module.js');
 
-app.run(appRun);
-
-appRun.$inject = ['$state', 'statehelper'];
 function appRun($state, statehelper) {
     statehelper.configureStates(getStates());
 }
+
+appRun.$inject = ['$state', 'statehelper'];
+
+app.run(appRun);
 
 function getStates() {
     return [

@@ -1,12 +1,11 @@
 'use strict';
 
-var widgetsModule = require('./widgets.module.js');
+var widgetsModule = require('../widgets.module.js');
 
 require('./spinner.scss');
 
 widgetsModule.directive('spinner', Spinner);
 
-Spinner.$inject = ['$window'];
 function Spinner($window) {
     // Description:
     // Creates a new Spinner and sets its options
@@ -30,3 +29,5 @@ function Spinner($window) {
         }, true);
     }
 }
+
+Spinner.$inject = ['$window'];

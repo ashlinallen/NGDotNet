@@ -4,7 +4,6 @@ var exceptionModule = require('./exception.module.js');
 
 exceptionModule.factory('exception', exception);
 
-exception.$inject = ['logger'];
 function exception(logger) {
     var service = {
         catcher: catcher
@@ -18,3 +17,5 @@ function exception(logger) {
         };
     }
 }
+
+exception.$inject = ['logger'];

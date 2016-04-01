@@ -6,7 +6,6 @@ require('./shell.scss');
 
 layoutModule.controller('Shell', Shell);
 
-Shell.$inject = ['$timeout', 'config', 'logger'];
 function Shell($timeout, config, logger) {
     var vm = this;
 
@@ -29,3 +28,5 @@ function Shell($timeout, config, logger) {
         }, 1000);
     }
 }
+
+Shell.$inject = ['$timeout', 'config', 'logger'];

@@ -1,6 +1,6 @@
 'use strict';
 
-var widgetsModule = require('./widgets.module.js');
+var widgetsModule = require('../widgets.module.js');
 
 require('./widget-header.scss');
 

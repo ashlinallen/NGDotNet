@@ -1,1 +1,136 @@
-﻿
+﻿/**************************/
+/* start customtheme.scss */
+/**************************/
+.navbar {
+    background: #000;
+    
+    * {
+        background-image: none !important;
+        text-shadow: none !important;
+    }
+    
+    .container {
+        width: 97% !important;
+    }
+
+    .nav > li > a {
+        font-size: 13px !important;
+        color: #fff !important;
+    }
+
+    i {
+        margin-right: 3px;
+    }
+
+    .caret {
+        border-top-color: #fff !important;
+        border-bottom-color: #fff !important;
+    }
+}
+.dropdown-big {
+    .dropdown-menu {
+        min-width: 250px;
+        padding: 8px 10px;
+        background: #fff;
+
+        p {
+            margin: 1px 0;
+            padding: 1px 0;
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        a {
+            font-size: 13px;
+            line-height: 23px;
+            background: transparent;
+            padding: 0;
+            color: #444 !important;
+            display: inline;
+
+            &:hover {
+                color: #777 !important;
+                background: transparent !important;
+            }
+        }
+
+        .drop-foot {
+            text-align: center;
+
+            a {
+                font-size: 12px !important;
+            }
+        }
+
+        hr {
+            padding: 0;
+            margin: 8px 0;
+            border-top: 0 solid #aaa;
+            border-bottom: 1px solid #eee;
+        }
+
+        h5 {
+            color: #666 !important;
+            line-height: 18px;
+            font-weight: bold;
+            font-size: 13px;
+        }
+    }
+}
+
+.navbar-logo img {
+    height: 20px;
+}
+
+@media (max-width: 767px) {
+    .navbar {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .navbar {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+}
+/************************/
+/* end customtheme.scss */
+/************************/
+
+
+/*********************/
+/* start styles.scss */
+/*********************/
+.navbar-inverse {
+    background-color: #333;
+}
+
+.navbar {
+    .navbar-brand {
+        /*background: url(../content/images/gg.png) no-repeat left top !important;*/
+        margin: 0 1em;
+        height: 45px;
+    }
+
+    .brand-title {
+        /*margin-left: 4em;*/
+        color: #FFFFFF;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar .btn-navbar {
+        display: block;
+    }
+}
+
+@media (max-width: 979px) {
+    .navbar .btn-navbar {
+        display: none;
+    }
+}
+/*********************/
+/* end styles.scss   */
+/*********************/

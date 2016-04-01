@@ -26,9 +26,9 @@ var appModule = angular.module('app', [
 
 angular.element(document).ready(function() {
     // mount on window for testing
-    window.app = appModule;
+    //window.app = appModule;
 
-    angular.bootstrap(document, ['app']);
+    //angular.bootstrap(document, ['app']);
 });
 
 module.exports = appModule;
