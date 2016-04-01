@@ -50,7 +50,6 @@
   <ItemGroup>
     <Folder Include="app\assets\Scripts\Custom\" />
     <Folder Include="app\assets\Scripts\Vendor\" />
-    <Folder Include="app\widgets\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
