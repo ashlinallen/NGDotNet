@@ -138,7 +138,6 @@
     <Content Include="app\assets\Styles\README.txt" />
     <Content Include="app\assets\Styles\styles.scss" />
     <Content Include="app\blocks\exception\exception-handler.provider.js" />
-    <Content Include="app\blocks\exception\exception-handler.provider.jsbak" />
     <Content Include="app\blocks\exception\exception.module.js" />
     <Content Include="app\blocks\exception\exception.service.js" />
     <Content Include="app\blocks\logger\logger.module.js" />
