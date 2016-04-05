@@ -1,3 +1,4 @@
+/// <binding ProjectOpened='Hot' />
 'use strict';
 
 var path = require('path'),
@@ -28,13 +29,13 @@ var config = {
             'angular-bootstrap',
             'angular-route',
             'angular-sanitize',
+            'angular-ui-router',
             'angularplus',
             'bootstrap',
             'font-awesome-webpack',
             'jquery',
             'moment',
-            'toastr',
-            'ui-router'
+            'toastr'
         ]
     },
     module: {
