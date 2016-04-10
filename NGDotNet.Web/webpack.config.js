@@ -6,6 +6,7 @@ var path = require('path'),
     webpack = require('webpack'),
     autoprefixer = require('autoprefixer'),
     Clean = require('clean-webpack-plugin'),
+    CopyWebpackPlugin = require('copy-webpack-plugin'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
     ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -103,7 +104,10 @@ var config = {
         }),
         new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery' }),
         new webpack.optimize.OccurrenceOrderPlugin(true),
-        new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/)
+        new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/),
+        new CopyWebpackPlugin([
+            { from: 'app/assets/Images/Thumbnails' }
+        ])
     ],
     postcss: [
         autoprefixer({ browsers: ['last 10 versions', '> 10%', '> 5% in US', 'Explorer >= 9'] })
