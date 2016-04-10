@@ -165,21 +165,21 @@
     <Content Include="app\shared\layout\shell\shell.scss" />
     <Content Include="app\shared\layout\sidebar\sidebar.html" />
     <Content Include="app\shared\layout\sidebar\sidebar.js" />
-    <Content Include="app\shared\layout\sidebar\sidebar.scss" />
     <Content Include="app\shared\layout\topnav\topnav.html" />
     <Content Include="app\shared\layout\topnav\topnav.js" />
     <Content Include="app\shared\layout\topnav\topnav.scss" />
     <Content Include="app\shared\widgets\sidebar\sidebar.directive.js" />
     <Content Include="app\shared\widgets\sidebar\sidebar.scss" />
     <Content Include="app\shared\widgets\spinner\spinner.directive.js" />
-    <Content Include="app\shared\widgets\spinner\spinner.scss" />
     <Content Include="app\shared\widgets\widget-close\widget-close.directive.js" />
-    <Content Include="app\shared\widgets\widget-close\widget-close.scss" />
+    <Content Include="app\shared\widgets\widget-close\widget-close.html" />
     <Content Include="app\shared\widgets\widget-header\widget-header.directive.js" />
     <Content Include="app\shared\widgets\widget-header\widget-header.html" />
     <Content Include="app\shared\widgets\widget-header\widget-header.scss" />
     <Content Include="app\shared\widgets\widget-minimize\widget-minimize.directive.js" />
-    <Content Include="app\shared\widgets\widget-minimize\widget-minimize.scss" />
+    <Content Include="app\shared\widgets\widget-minimize\widget-minimize.html" />
+    <Content Include="app\shared\widgets\widget.directive.js" />
+    <Content Include="app\shared\widgets\widget.html" />
     <Content Include="app\shared\widgets\widgets.module.js" />
     <Content Include="app\_index.js" />
     <Content Include="package.json" />
@@ -194,6 +194,8 @@
     <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\shared\widgets\widget.scss" />
+    <Content Include="app\shared\layout\sidebar\sidebar.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

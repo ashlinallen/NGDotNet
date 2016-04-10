@@ -2,8 +2,6 @@
 
 var widgetsModule = require('../widgets.module.js');
 
-require('./widget-close.scss');
-
 widgetsModule.directive('widgetClose', WidgetClose);
 
 function WidgetClose() {
@@ -15,7 +13,7 @@ function WidgetClose() {
     // </a>
     var directive = {
         link: link,
-        template: '<i class="fa fa-remove"></i>',
+        template: require('./widget-close.html'),
         restrict: 'A'
     };
     

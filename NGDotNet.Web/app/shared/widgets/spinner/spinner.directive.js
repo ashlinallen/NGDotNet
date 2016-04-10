@@ -2,8 +2,6 @@
 
 var widgetsModule = require('../widgets.module.js');
 
-require('./spinner.scss');
-
 widgetsModule.directive('spinner', Spinner);
 
 function Spinner($window) {

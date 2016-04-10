@@ -2,8 +2,6 @@
 
 var widgetsModule = require('../widgets.module.js');
 
-require('./widget-minimize.scss');
-
 widgetsModule.directive('widgetMinimize', WidgetMinimize);
 
 function WidgetMinimize() {
@@ -13,7 +11,7 @@ function WidgetMinimize() {
     // <a data-widget-minimize='' href='#'><i class='fa fa-chevron-up'></i></a>
     var directive = {
         link: link,
-        template: '<i class="fa fa-chevron-up"></i>',
+        template:  require('./widget-minimize.html'),
         restrict: 'A'
     };
     
