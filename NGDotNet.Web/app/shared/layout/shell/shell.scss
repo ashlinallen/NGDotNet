@@ -1,0 +1,137 @@
+#splash-page {
+    z-index: 99999 !important;
+
+    .bar {
+        width: 100%;
+    }
+}
+
+.page-splash {
+    z-index: 99999 !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    opacity: .9;
+    pointer-events: auto;
+    backface-visibility: hidden;
+    transition: opacity 0.3s linear;
+}
+
+.page-splash-message {
+    text-align: center;
+    margin: 20% auto 0 auto;
+    font-size: 400%;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.15);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #F58A00;
+    padding: 0;
+
+    &.page-splash-message-subtle {
+        margin: 30% auto 0 auto;
+        font-size: 200%;
+    }
+}
+
+/*#region Angular ng-show dissolve animation */
+.dissolve-animation {
+    &.ng-hide-remove,
+    &.ng-hide-add {
+        position: fixed !important;
+        display: inline !important;
+        transition: 0.5s linear all;
+    }
+
+    &.ng-hide-remove.ng-hide-remove-active,
+    &.ng-hide-add {
+        opacity: 1;
+    }
+
+    &.ng-hide-add.ng-hide-add-active,
+    &.ng-hide-remove {
+        opacity: 0;
+    }
+}
+/*#endregion */
+
+/*#region Angular ng-include, ng-view, ng-repeat shuffle animations*/
+.shuffle-animation {
+    &.ng-enter,
+    &.ng-leave {
+        position: relative;
+    }
+
+    &.ng-enter {
+        transition: ease-out all 0.3s 0.4s;
+        left: 2em;
+        opacity: 0;
+
+        &.ng-enter-active {
+            left: 0;
+            opacity: 1;
+        }
+    }
+
+    &.ng-leave {
+        transition: 0.3s ease-out all;
+        left: 0;
+        opacity: 1;
+
+        &.ng-leave-active {
+            left: 2em;
+            opacity: 0;
+        }
+    }
+}
+/*#endregion*/
+
+.ngplus-overlay-background {
+    top: 0px;
+    left: 0px;
+    padding-left: 100px;
+    position: absolute;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+    background-color: #808080;
+    opacity: 0.2;
+}
+
+.ngplus-overlay-content {
+    position: absolute;
+    /*border: 1px solid #000;*/
+    /*background-color: #fff;*/
+    font-weight: bold;
+    height: 100px;
+    width: 300px;
+    height: 15em;
+    width: 20em;
+    z-index: 10000;
+    text-align: center;
+}
+
+.overlay-message {
+    font-size: 200%;
+}
+
+@media (max-width: 979px) {
+    .page-splash-message {
+        font-size: 300%;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-splash-message {
+        font-size: 200%;
+        margin: 40% auto 0 auto;
+
+        &.page-splash-message-subtle {
+            font-size: 150%;
+        }
+    }
+}

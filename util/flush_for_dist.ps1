@@ -7,11 +7,11 @@ set-location ../
 
 ###################################################
 # Deletes the wwwroot, node_components,           #
-# bower_components and nuget_packages directories #
+# nuget_packages directories                      #
 ###################################################
-if((Test-Path "NGDotNet.Web\gulp_build\")){
-    cmd /c rmdir "NGDotNet.Web\gulp_build\" /s /q
-    Write-Host "Removed: NGDotNet.Web\gulp_build\" -foregroundcolor green
+if((Test-Path "NGDotNet.Web\webpack_build\")){
+    cmd /c rmdir "NGDotNet.Web\webpack_build\" /s /q
+    Write-Host "Removed: NGDotNet.Web\webpack_build\" -foregroundcolor green
 }
 if((Test-Path "NGDotNet.Web\index.html")){
     cmd /c del "NGDotNet.Web\index.html" /q
@@ -28,10 +28,6 @@ if((Test-Path "NGDotNet.Web\favicon_large.ico")){
 if((Test-Path "NGDotNet.Web\node_modules")){
     cmd /c rmdir "NGDotNet.Web\node_modules" /s /q
     Write-Host "Removed: node_modules" -foregroundcolor green
-}
-if((Test-Path "NGDotNet.Web\bower_components")){
-    cmd /c rmdir "NGDotNet.Web\bower_components" /s /q
-    Write-Host "Removed: bower_components" -foregroundcolor green
 }
 if((Test-Path "nuget_packages")){
     cmd /c rmdir "nuget_packages" /s /q

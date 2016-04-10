@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-var exceptionModule = require('./_index');
+var exceptionModule = require('./exception.module.js');
 
 // Include in index.html so that app level exceptions are handled.
 // Exclude from testRunner.html which should run exactly what it wants to run
@@ -8,6 +8,7 @@ var exceptionModule = require('./_index');
 exceptionModule
     .provider('exceptionHandler', exceptionHandlerProvider)
     .config(config);
+
 
 /**
  * Must configure the exception handling
@@ -27,17 +28,19 @@ function exceptionHandlerProvider() {
     };
 }
 
+
 /**
  * Configure by setting an optional string value for appErrorPrefix.
  * Accessible via config.appErrorPrefix (via config value).
  * @param  {[type]} $provide
  * @return {[type]}
  */
-
-/* @ngInject */
 function config($provide) {
     $provide.decorator('$exceptionHandler', extendExceptionHandler);
 }
+
+config.$inject = ['$provide'];
+
 
 /**
  * Extend the $exceptionHandler service to also display a toast.
@@ -46,7 +49,6 @@ function config($provide) {
  * @param  {Object} logger
  * @return {Function} the decorated $exceptionHandler service
  */
-/* @ngInject */
 function extendExceptionHandler($delegate, exceptionHandler, logger) {
     return function (exception, cause) {
         var appErrorPrefix = exceptionHandler.config.appErrorPrefix || '';
@@ -65,3 +67,5 @@ function extendExceptionHandler($delegate, exceptionHandler, logger) {
         logger.error(exception.message, errorData);
     };
 }
+
+extendExceptionHandler.$inject = ['$delegate', 'exceptionHandler', 'logger'];

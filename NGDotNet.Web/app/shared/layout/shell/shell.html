@@ -1,0 +1,22 @@
+﻿<div>
+    <div id='splash-page' data-ng-show='vm.showSplash' class='dissolve-animation'>
+        <div class='page-splash'>
+            <div class='page-splash-message'>
+                NGDotNet
+            </div>
+        </div>
+    </div>
+    
+    <header data-ui-view='topnav' class='clearfix'><!--topnav--></header>
+    <section id='content' class='content'>
+        <div data-ui-view='sidebar'><!--sidebar--></div>
+
+        <div data-ui-view class='shuffle-animation'></div>
+
+        <div ngplus-overlay ngplus-overlay-delay-in='50' ngplus-overlay-delay-out='700' ngplus-overlay-animation='dissolve-animation'>
+            <img src='../../../assets/Images/busy.gif' />
+
+            <div class='page-spinner-message overlay-message'>{{ vm.busyMessage }}</div>
+        </div>
+    </section>
+</div>

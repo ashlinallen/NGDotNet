@@ -1,0 +1,42 @@
+.sidebar-inner {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 60;
+    background-color: #333;
+}
+
+.sidebar-filler {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #333;
+    width: 230px;
+}
+
+@media (min-width: 768px) {
+    .sidebar .sidebar-inner {
+        display: block !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        .sidebar-filler {
+            display: none;
+        }
+
+        .sidebar-inner {
+        display: none;
+        }
+    }
+}
+
+@media (max-width: 979px) {
+    .sidebar-filler {
+        width: 200px;
+    }
+}

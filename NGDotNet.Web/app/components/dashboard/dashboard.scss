@@ -1,0 +1,72 @@
+.today-datas {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+
+    li {
+        display: inline-block;
+        margin-bottom: 5px;
+        margin-right: 10px;
+        background-color: #f8f8f8;
+        background: #f8f8f8;
+        border: 1px solid #ccc;
+        max-width: 100%;
+        text-align: center;
+        padding: 20px 14px;
+        height: 9em;
+
+        i {
+            font-size: 50px;
+            margin-right: 10px;
+        }
+
+        .spark {
+            margin-right: 10px;
+        }
+
+        .datas-text {
+            font-size: 13px;
+            padding: 7px 0 0 0;
+            font-weight: normal;
+
+            span {
+                display: block;
+                font-size: 24px;
+                margin-bottom: 5px;
+            }
+        }
+
+        .dial {
+            margin-right: 10px !important;
+        }
+    }
+}
+
+.avenger-logo {
+    height: 75px;
+    width:80px;
+    background: url(../../assets/images/avengersicon-xs.png) no-repeat left top !important;
+}
+
+@media (max-width: 767px) {
+    .today-datas {
+        text-align: center;
+    }
+}
+
+@media (max-width: 320px) {
+    .today-datas {
+        padding: 1em .5em;
+        line-height: 1em;
+
+        li {
+            i {
+                font-size: 2em;
+            }
+
+            .datas-text span {
+                font-size: 1em;
+            }
+        }
+    }
+}

@@ -1,9 +1,8 @@
-# PowerShell script that clears the bower and npm caches
+# PowerShell script that clears npm and nuget caches
 set-location ../
 
 Write-Host "Flushing package manager files." -foregroundcolor DarkCyan
 
-bower cache clean
 npm cache clean
 .nuget/nuget locals all -clear
 

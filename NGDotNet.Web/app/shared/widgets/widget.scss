@@ -1,0 +1,52 @@
+﻿.widget {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background: #fff;
+
+    hr {
+        margin: 4px 0;
+        padding: 4px 0;
+        border-top: 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .table {
+        margin: 0;
+        width: 100%;
+    }
+
+    .widget-content {
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        padding: 1em;
+        margin: 0;
+    }
+
+    .widget-foot {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-top: 0;
+        padding: 8px 15px;
+        font-size: 13px;
+        color: #555;
+    }
+}
+
+.user {
+    font-size: 12px !important;
+    line-height: 20px !important;
+
+    h6 {
+        line-height: 17px !important;
+    }
+
+    img {
+        max-width: 70px;
+        margin-top: 10px;
+    }
+
+    .btn {
+        font-size: 11px !important;
+    }
+}

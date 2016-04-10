@@ -4,9 +4,6 @@
 ## Node.js modules
 node_modules
 
-## Bower components
-bower_components
-
 ## Ignore NuGet files except repositories file and "build/" folder in the NuGet Packages folder since NuGet packages use it for MSBuild targets
 nuget_packages/*
 !nuget_packages/repositories.config
@@ -24,7 +21,7 @@ x64/
 build/
 [Bb]in/
 [Oo]bj/
-gulp_build/
+webpack_build/
 NGDotNet.Web/index.html
 NGDotNet.Web/favicon.ico
 NGDotNet.Web/favicon_large.ico

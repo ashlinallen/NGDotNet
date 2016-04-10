@@ -1,0 +1,220 @@
+/* Sidebar */
+.sidebar {
+    width: 230px;
+    float: left;
+    display: block;
+    background: #111;
+    color: #eee;
+    position: relative;
+
+    hr {
+        border-bottom: 1px solid #333 !important;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        li {
+            list-style-type: none;
+        }
+    }
+
+    .navi {
+        li {
+            i {
+                margin-right: 5px;
+            }
+
+            span i {
+                margin: 0;
+            }
+
+            ul {
+                display: none;
+                background: #181818;
+
+                li {
+                    a {
+                        display: block;
+                        background: none;
+                        padding: 10px 0;
+                        padding-left: 30px;
+                        text-decoration: none;
+                        color: #999;
+                        border-bottom: 1px solid #222;
+
+                        &:hover {
+                            background: #131313;
+                            border-bottom: 1px solid #222;
+                        }
+                    }
+
+                    &.active a {
+                        background: #131313;
+                        border-bottom: 1px solid #222;
+                    }
+                }
+            }
+
+            &.open ul {
+                display: block;
+            }
+        }
+
+        > li {
+            > a {
+                display: block;
+                padding: 12px 20px;
+                font-size: 15px;
+                line-height: 25px;
+                color: #fff;
+                text-decoration: none;
+                border-bottom: 1px solid #222;
+                background-color: #111;
+            }
+
+            > a:hover,
+            &.open > a {
+                border-bottom: 1px solid #222;
+                background-color: #222;
+                color: #fff;
+            }
+
+            /* Sidebar colors */
+            &.nlightblue > a:hover,
+            &.open.nlightblue > a,
+            &.current.nlightblue > a {
+                background: #52b9e9 !important;
+                transition: background 0.5s ease;
+            }
+
+            &.nblue > a:hover,
+            &.open.nblue > a,
+            &.current.nblue > a {
+                background: #1171a3 !important;
+                transition: background 0.5s ease;
+            }
+
+            &.ngreen > a:hover,
+            &.open.ngreen > a,
+            &.current.ngreen > a {
+                background: #43c83c !important;
+                transition: background 0.5s ease;
+            }
+
+            &.norange > a:hover,
+            &.open.norange > a,
+            &.current.norange > a {
+                background: #f88529 !important;
+                transition: background 0.5s ease;
+            }
+
+            &.nred > a:hover,
+            &.open.nred > a,
+            &.current.nred > a {
+                background: #fa3031 !important;
+                transition: background 0.5s ease;
+            }
+
+            &.nviolet > a:hover,
+            &.open.nviolet > a,
+            &.current.nviolet > a {
+                background: #932ab6 !important;
+                transition: background 0.5s ease;
+            }
+        }
+    }
+
+    /* Sidebar dropdown */
+    .sidebar-dropdown {
+        display: none;
+        * {
+            text-decoration: none;
+        }
+
+        a {
+            color: #ddd;
+            background-color: #343434;
+            padding: 6px;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 13px;
+            display: block;
+            border-top: 1px solid #666;
+            border-bottom: 1px solid #333;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    /* Sidebar widget */
+    .sidebar-widget {
+        padding: 10px 5px;
+    }
+
+    .ui-state-default {
+        background: #222;
+        border: 0;
+        text-align: center;
+        color: #ccc;
+
+        &:hover {
+            background: #282828;
+            color: #999;
+        }
+    }
+
+    .ui-state-hightlight, .ui-state-active {
+        background: #444;
+    }
+}
+    
+        
+@media (max-width: 767px) {
+    .sidebar {
+        float: none;
+        width: 100%;
+
+        .sidebar-dropdown {
+            display: block;
+        }
+
+        .sidebar-widget {
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .sidebar {
+        width: 200px;
+    }
+}
+
+.sidebar-widget form {
+    margin: 0em -1em;
+}
+
+.sidebar {
+    margin-top: -2px;
+
+    .navi > li > a {
+        background-color: #333 !important;
+    }
+
+    .navi li ul li a {
+        color: #fff;
+
+        &:hover {
+            color: #52b9e9;
+        }
+
+        &:disabled {
+            color: #999;
+        }
+    }
+}
