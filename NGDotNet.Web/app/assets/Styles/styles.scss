@@ -1,60 +1,32 @@
-﻿html {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-*, *:before, *:after {
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: inherit;
-}
+﻿/*#region Override background color theme */
+/*For Bootstrap 3*/
+.nav { cursor: pointer; }
 
 body {
     background-color: #FFF;
 }
+/*#endregion */
+
+/* #region Main Styles */
+.ng-cloak {
+    display: none !important;
+ }
 
 select > option {
     color: black;
 }
 
-small {
-    font-size: 14px;
-}
-
-table {
-    th > a {
-        font-weight: bold;
-    }
-    th, td {
-        text-align: left;
-        vertical-align: middle;
-    }
-}
-  
-.nav, .panel-title a {
-    cursor: pointer;
-}
-
-.ng-cloak {
-    display: none !important;
-}
-
-.widget .padd {
-    height: 12em;
-
-    &.padd-tight {
-        padding: 6px;
-    }
+.btn > i {
+    margin-right: 8px;
 }
 
 .btn {
     margin-right: 4px;
     margin-left: 4px;
+}
 
-    > i {
-        margin-right: 8px;
-    }
+small {
+    font-size: 14px;
 }
 
 .right {
@@ -62,97 +34,39 @@ table {
     float: right;
 }
 
-.input-group[class*='col-'] {
+.input-group[class*="col-"] {
     width: 80%;
     margin: 0 1.5em;
 }
 
-.widget-content {
-    padding: 1em;
-    margin: 0;
-    
-    &.referrer {
-        border-width: 0;
-    }
-
-    .padd:hover {
-        cursor: pointer;
-        color: white;
-        background-color: #52b9e9;
-
-        * {
-            color: white;
-        }
-    }
+.spinner {
+    margin: 20% auto 0 auto;
+    left: auto;
+    top: auto !important;
 }
 
-.table-hover tbody tr:hover {
-    > td, > th {
-        cursor: pointer;
-    }
+table th > a {
+    font-weight: bold;
+}
+
+table th,
+table td {
+    text-align: left;
+    vertical-align: middle;
 }
 
 a {
     cursor: pointer;
 }
+/* #endregion */
 
-.shuffle-animation {
-    &.ng-enter,
-    &.ng-leave {
-        position: relative;
-    }
-
-    &.ng-enter {
-        transition: ease-out all 0.3s 0.4s;
-        left: 2em;
-        opacity: 0;
-
-        &.ng-enter-active {
-            left: 0;
-            opacity: 1;
-        }
-    }
-
-    &.ng-leave {
-        transition: 0.3s ease-out all;
-        left: 0;
-        opacity: 1;
-
-        &.ng-leave-active {
-            left: 2em;
-            opacity: 0;
-        }
-    }
-}
-
-.dissolve-animation {
-    &.ng-hide-remove,
-    &.ng-hide-add {
-        position: fixed !important;
-        display: inline !important;
-        transition: 0.5s linear all;
-    }
-
-    &.ng-hide-remove.ng-hide-remove-active,
-    &.ng-hide-add {
-        opacity: 1;
-    }
-
-    &.ng-hide-add.ng-hide-add-active,
-    &.ng-hide-remove {
-        opacity: 0;
-    }
-}
-
-#toast-container {
-    .toast-top-full-width, .toast-bottom-full-width {
-        > div {
-            margin: 4px auto;
-        }
-    }
-}
-
+/*#region Responsive */
 @media (max-width: 320px) {
+    .btn {
+        margin: .2em;
+        width: 7em;
+    }
+
     input,
     select {
         width: 85% !important;
@@ -166,9 +80,5 @@ a {
         font-size: 1.5em !important;
         line-height: 1.2em !important;
     }
-
-    .btn {
-        margin: .2em;
-        width: 7em;
-    }
 }
+/*#endregion */

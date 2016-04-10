@@ -1,6 +1,4 @@
-/**************************/
-/* start customtheme.scss */
-/**************************/
+/* Sidebar */
 .sidebar {
     width: 230px;
     float: left;
@@ -21,15 +19,6 @@
         li {
             list-style-type: none;
         }
-    }
-
-    .sidebar-inner {
-        display: block;
-        width: 100%;
-        margin: 0 auto;
-        position: absolute;
-        z-index: 60;
-        background: #111;
     }
 
     .navi {
@@ -86,18 +75,53 @@
                 background-color: #111;
             }
 
-            > a:hover, &.open > a {
+            > a:hover,
+            &.open > a {
                 border-bottom: 1px solid #222;
                 background-color: #222;
                 color: #fff;
             }
 
             /* Sidebar colors */
-
             &.nlightblue > a:hover,
             &.open.nlightblue > a,
             &.current.nlightblue > a {
                 background: #52b9e9 !important;
+                transition: background 0.5s ease;
+            }
+
+            &.nblue > a:hover,
+            &.open.nblue > a,
+            &.current.nblue > a {
+                background: #1171a3 !important;
+                transition: background 0.5s ease;
+            }
+
+            &.ngreen > a:hover,
+            &.open.ngreen > a,
+            &.current.ngreen > a {
+                background: #43c83c !important;
+                transition: background 0.5s ease;
+            }
+
+            &.norange > a:hover,
+            &.open.norange > a,
+            &.current.norange > a {
+                background: #f88529 !important;
+                transition: background 0.5s ease;
+            }
+
+            &.nred > a:hover,
+            &.open.nred > a,
+            &.current.nred > a {
+                background: #fa3031 !important;
+                transition: background 0.5s ease;
+            }
+
+            &.nviolet > a:hover,
+            &.open.nviolet > a,
+            &.current.nviolet > a {
+                background: #932ab6 !important;
                 transition: background 0.5s ease;
             }
         }
@@ -106,7 +130,6 @@
     /* Sidebar dropdown */
     .sidebar-dropdown {
         display: none;
-
         * {
             text-decoration: none;
         }
@@ -132,8 +155,25 @@
     .sidebar-widget {
         padding: 10px 5px;
     }
-}
 
+    .ui-state-default {
+        background: #222;
+        border: 0;
+        text-align: center;
+        color: #ccc;
+
+        &:hover {
+            background: #282828;
+            color: #999;
+        }
+    }
+
+    .ui-state-hightlight, .ui-state-active {
+        background: #444;
+    }
+}
+    
+        
 @media (max-width: 767px) {
     .sidebar {
         float: none;
@@ -141,10 +181,6 @@
 
         .sidebar-dropdown {
             display: block;
-        }
-
-        .sidebar-inner {
-            display: none;
         }
 
         .sidebar-widget {
@@ -158,53 +194,27 @@
         width: 200px;
     }
 }
-/************************/
-/* end customtheme.scss */
-/************************/
 
-
-/*********************/
-/* start styles.scss */
-/*********************/
+.sidebar-widget form {
+    margin: 0em -1em;
+}
 
 .sidebar {
     margin-top: -2px;
-    .navi {
-        > li > a {
-            background-color: #333 !important;
+
+    .navi > li > a {
+        background-color: #333 !important;
+    }
+
+    .navi li ul li a {
+        color: #fff;
+
+        &:hover {
+            color: #52b9e9;
         }
 
-        li ul li {
-            a {
-                color: #fff;
-
-                &:hover {
-                    color: #52b9e9;
-                }
-
-                &:disabled {
-                    color: #999;
-                }
-            }
+        &:disabled {
+            color: #999;
         }
     }
-
-    .sidebar-inner {
-        background-color: #333;
-    }
 }
-
-@media (max-width: 767px) {
-    .sidebar .sidebar-inner {
-        height: inherit;
-    }
-}
-
-@media (min-width: 768px) {
-    .sidebar .sidebar-inner {
-        display: block !important;
-    }
-}
-/*********************/
-/* end styles.scss   */
-/*********************/

@@ -1,15 +1,12 @@
-/**************************/
-/* start customtheme.scss */
-/**************************/
+.sidebar-inner {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 60;
+    background-color: #333;
+}
 
-/************************/
-/* end customtheme.scss */
-/************************/
-
-
-/*********************/
-/* start styles.scss */
-/*********************/
 .sidebar-filler {
     z-index: -1;
     position: fixed;
@@ -20,9 +17,21 @@
     width: 230px;
 }
 
+@media (min-width: 768px) {
+    .sidebar .sidebar-inner {
+        display: block !important;
+    }
+}
+
 @media (max-width: 767px) {
-    .sidebar-filler {
+    .sidebar {
+        .sidebar-filler {
+            display: none;
+        }
+
+        .sidebar-inner {
         display: none;
+        }
     }
 }
 
@@ -31,6 +40,3 @@
         width: 200px;
     }
 }
-/*********************/
-/* end styles.scss   */
-/*********************/

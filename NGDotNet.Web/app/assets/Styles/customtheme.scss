@@ -1,36 +1,43 @@
 * {
-    /*box-shadow: none !important;
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false) !important;
-    text-shadow: none !important;*/
-    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
-    /*font-weight: 400;*/
+}
+
+.btn, input, select {
+    border-radius: 0 !important;
 }
 
 input, select {
     padding: 4px !important;
-    /*width: 65% !important;*/
     display: inline-block !important;
+}
+
+form * {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
 }
 
 input, textarea {
     background-image: none !important;
     border: 1px solid #ccc !important;
-    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
 }
 
 select {
     font-size: 13px !important;
-    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
 }
 
-input {
-    &[type='radio'], &[type='checkbox'] {
-        margin: 0 0 0 !important;
-        margin-right: 5px !important;
-        line-height: 23px !important;
-        border: 0 !important;
-    }
+input[type="radio"], input[type="checkbox"] {
+    margin: 0 0 0 !important;
+    margin-right: 5px !important;
+    line-height: 23px !important;
+    border: 0 !important;
+}
+
+.btn {
+    background-image: none !important;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 13px !important;
 }
 
 body {
@@ -99,6 +106,10 @@ a {
     }
 }
 
+.bold {
+    font-weight: 600;
+}
+
 hr {
     margin: 8px 0 8px 0 !important;
     padding: 0 !important;
@@ -115,27 +126,62 @@ hr {
     border: 0;
 }
 
-.btn {
-    background-image: none !important;
-    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
-    font-size: 13px !important;
-}
-
-.bold {
-    font-weight: 600;
-}
-
 a.btn {
     font-size: 13px !important;
 }
 
-.btn, .modal, .modal-dialog, .modal-content, input, select {
-    border-radius: 0 !important;
+.label {
+    font-weight: 400;
+    padding: 3px 6px !important;
+    font-size: 13px;
 }
 
-.blightblue, .bblue {
-    border: 0 !important;
+/* colors */
+.lightblue {
+    color: #52b9e9 !important;
+}
+.blightblue {
+    background: #52b9e9 !important;
+}
+
+.blue {
+    color: #1171a3 !important;
+}
+.bblue {
+    background: #1171a3 !important;
+}
+
+.green {
+    color: #43c83c !important;
+}
+.bgreen {
+    background: #43c83c !important;
+}
+
+.orange {
+    color: #f88529 !important;
+}
+.borange {
+    background: #f88529 !important;
+}
+
+.red {
+    color: #fa3031 !important;
+}
+.bred {
+    background: #fa3031 !important;
+}
+
+.violet {
+    color: #932ab6 !important;
+}
+.bviolet {
+    background: #932ab6 !important;
+}
+
+.blightblue, .bblue, .bgreen, .bred, .borange, .bviolet {
     color: #fff !important;
+    border: 0 !important;
 
     h2, h3, h4, h5, h6 {
         color: #fff !important;
@@ -150,19 +196,21 @@ a.btn {
     }
 }
 
-.blightblue {
-    background: #52b9e9 !important;
+/* Form */
+form {
+    margin: 10px;
+
+    input, button, textarea, select {
+        font-size: 13px !important;
+    }
+
+    label {
+        font-size: 13px;
+        line-height: 13px;
+    }
 }
 
-.bblue {
-    background: #1171a3 !important;
-}
-
-.modal-header {
-    padding-top: 7px;
-    padding-bottom: 7px;
-}
-
+/* Main */
 .mainbar {
     position: relative;
     margin-left: 230px;
@@ -175,121 +223,24 @@ a.btn {
         width: 100%;
         padding: 0 !important;
     }
-    
+
     .matter {
         border-top: 0px solid #ddd;
         margin: 2em;
     }
 }
 
-.widget {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    background: #fff;
-
-    hr {
-        margin: 4px 0;
-        padding: 4px 0;
-        border-top: 0;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .table {
-        margin: 0;
-        width: 100%;
-    }
-
-    .table-bordered {
-        border: 0;
-
-        th, td {
-            border-bottom: 1px solid #ccc !important;
-
-            &:first-child, &:first-child {
-                border-left: 0;
-            }
-        }
-
-        td {
-            border-top: 0 !important;
-        }
-    }
-
-    .padd {
-        padding: 15px;
-    }
-
-    .widget-head {
-        background-color: #f5f5f5;
-        border: 1px solid #ddd;
-        color: #777;
-        font-size: 18px;
-        padding: 12px 15px;
-
-        .widget-icons {
-            i {
-                font-size: 14px;
-                margin: 0 4px;
-            }
-
-            a {
-                color: #aaa;
-
-                &:hover {
-                    color: #888;
-                }
-            }
-        }
-    }
-
-    .widget-content {
-        border-left: 1px solid #ddd;
-        border-right: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .widget-foot {
-        background-color: #f9f9f9;
-        border: 1px solid #ddd;
-        border-top: 0;
-        padding: 8px 15px;
-        font-size: 13px;
-        color: #555;
-    }
-
-    /* Widget colors */
-    &.wblue, &.wlightblue {
-        .widget-head {
-            color: #fff;
-            border: 1px solid #000;
-
-            .widget-icons {
-                a {
-                    color: #fff;
-
-                    &:hover {
-                        color: #eee;
-                    }
-                }
-            }
-        }
-    }
-
-    &.wlightblue .widget-head {
-        background-color: #52b9e9;
-        border-color: #52b9e9;
-    }
-
-    &.wblue .widget-head {
-        background-color: #1171a3;
-        border-color: #1171a3;
-    }
+/* Gallery */
+.gallery img {
+    max-width: 170px;
+    margin: 5px;
 }
 
+/* Responsive */
 @media (max-width: 767px) {
     body {
         margin: 0 auto;
-        
+
         .container {
             width: 95%;
             padding-left: 2.5%;
@@ -305,7 +256,7 @@ a.btn {
     .mainbar {
         margin: 0;
         float: none;
-        
+
         .matter {
             padding-left: 20px;
             padding-right: 20px;
@@ -314,7 +265,12 @@ a.btn {
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
+    .form {
+        margin: 0 !important;
+    }
+
     .mainbar {
         margin-left: 200px;
     }
 }
+/*#endregion */
